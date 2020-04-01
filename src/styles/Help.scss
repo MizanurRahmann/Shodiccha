@@ -66,6 +66,14 @@
                     color: #fff;
                 }
             }
+
+            .input-groups {
+                display: flex;
+                width: 100%;
+                input {
+                    width: 50%;
+                }
+            }
         }
     }
 }

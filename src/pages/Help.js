@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Help.scss";
+import "../styles/ApplyForm.scss";
 
 // Components
 import NavForViewer from "../components/NavForViewer";
@@ -24,41 +25,56 @@ function Help() {
                 </p>
 
                 {/* HELP FORM */}
-                <form>
-                    <input
-                        type="text"
-                        placeholder="আবেদনকারীর নাম"
-                        value={name}
-                        onChange={(e) => {
-                            setName(e.target.value);
-                        }}
-                    />
-                    <div className="selectOptions">
-                        <select
-                            value={medium}
-                            onChange={(e) => setMedium(e.target.value)}
-                        >
-                            <option value="self">নিজে</option>
-                            <option value="member">সদস্য</option>
-                        </select>
-                        <div className="arrow">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-down"
-                            >
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
+                <div className="applyForm">
+                    <form>
+                        <input type="text" placeholder="সাহায্যের বিষয়" />
+                        <div className="input-block">
+                            <input
+                                type="text"
+                                placeholder="আবেদনকারির নাম"
+                                value={name}
+                                onChange={(e) => {
+                                    setName(e.target.value);
+                                }}
+                            />
+                            <input type="text" placeholder="ফোন নাম্বার" />
                         </div>
-                    </div>
-                </form>
+                        <div className="selectOptions">
+                            <select
+                                value={medium}
+                                onChange={(e) => setMedium(e.target.value)}
+                            >
+                                <option value="self">মাধ্যমঃ নিজে</option>
+                                <option value="member">মাধ্যমঃ সদস্য</option>
+                            </select>
+                            <div className="arrow">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="feather feather-chevron-down"
+                                >
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div className="input-block">
+                            <input type="text" placeholder="গ্রাম" />
+                            <input type="text" placeholder="পোষ্ট" />
+                        </div>
+                        <div className="input-block">
+                            <input type="email" placeholder="থানা" />
+                            <input type="text" placeholder="জেলা" />
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     );
