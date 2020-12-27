@@ -1,3 +1,31 @@
+@font-face {
+    font-family: NILADRI;
+    src: url("./assets/fonts/niladri/Unicode/Li\ Niladri\ Moitree\ Unicode.ttf");
+}
+@font-face {
+    font-family: RONGDHONU;
+    src: url("./assets/fonts/rongdhonu/Unicode/Li\ Hasan\ Rongdhonu\ Unicode.ttf");
+}
+@font-face {
+    font-family: SHOBUJ;
+    src: url("./assets/fonts/shobuj/Unicode/Li\ Shobuj\ Borno\ Unicode.ttf");
+}
+/*
+@font-face {
+    font-family: PORI;
+    src: url("./assets/fonts/pori.ttf");
+} */
+
+:root {
+    --primary-color-dark: #a4647f;
+    --primary-color: #f8adb5;
+    --primary-color-light: #f8d8d8;
+    --primary-color-lighter: #fff6fa;
+    --text-color: #222;
+    --primary-font: "Quicksand", sans-serif;
+    --primary-font-bold: "Fredoka One", cursive;
+}
+
 * {
     margin: 0;
     padding: 0;
