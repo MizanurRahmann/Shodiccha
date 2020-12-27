@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Banner.scss";
 import dataAnalysis from "../assets/images/dataAnalysis.svg";
 
 function Banner() {

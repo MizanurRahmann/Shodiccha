@@ -1,0 +1,44 @@
+.description {
+    margin-top: 55px;
+    display: flex;
+
+    &__heading {
+        width: 50%;
+        // font-family: CHRONOUS-FILLED;
+        font-family: SHOBUJ;
+        font-size: 3rem;
+        color: var(--primary-color-dark);
+        position: relative;
+
+        svg {
+            width: 300px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            color: var(--primary-color-light);
+        }
+        h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+    }
+
+    &__text {
+        width: 50%;
+        font-family: SHOBUJ;
+        font-size: 20px;
+        color: var(--text-color);
+
+        p span {
+            font-size: 25px;
+            color: var(--primary-color-dark);
+            padding: 3px 5px;
+            margin: 0 3px;
+            border-radius: 3px;
+        }
+    }
+}
