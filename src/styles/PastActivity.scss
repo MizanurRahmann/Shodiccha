@@ -1,0 +1,47 @@
+.pastact {
+    width: 100%;
+    height: 100vh;
+    margin-top: 65px;
+    margin-bottom: 65px;
+    position: relative;
+    svg {
+        margin: auto;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        color: var(--primary-color-light);
+    }
+    h1 {
+        width: 100%;
+        font-family: SHOBUJ;
+        font-size: 4.4rem;
+        color: var(--primary-color-dark);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        text-align: center;
+    }
+    &__slider-block {
+        width: 100%;
+        height: 60vh;
+        position: absolute;
+        top: 180px;
+
+        .slider {
+            padding: 0 20px;
+        }
+    }
+}
+
+.slick-arrow {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50%;
+}
+.slick-arrow,
+.slick-arrow:hover,
+.slick-arrow:active,
+.slick-arrow:visited,
+.slick-arrow:link {
+    background: var(--primary-color-dark) !important;
+}

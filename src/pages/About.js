@@ -5,6 +5,7 @@ import "../styles/About.scss";
 import Banner from "../components/Banner";
 import Description from "../components/Description";
 import Summary from "../components/Summary";
+import PastActivities from "../components/PastActivities";
 
 function About() {
     return (
@@ -12,6 +13,7 @@ function About() {
             <Banner />
             <Description />
             <Summary />
+            <PastActivities />
         </div>
     );
 }

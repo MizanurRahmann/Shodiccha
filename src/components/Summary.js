@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Policies.scss";
+import "../styles/Summary.scss";
 import help from "../assets/images/help-1.jpeg";
 
 function Summary() {
