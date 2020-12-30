@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "../styles/Apply.scss";
 import volunteer from "../assets/images/volunteer.svg";
+
+// Components
 import NavForViewer from "../components/NavForViewer";
 import ApplyDescription from "../components/ApplyDescription";
 import ApplyForm from "../components/ApplyForm";
@@ -35,6 +38,7 @@ function Apply() {
                     <button
                         type="button"
                         className={state === 0 ? "inactive" : "previous"}
+                        onClick={state > 0 ? () => setState(state - 1) : null}
                     >
                         পূর্ববর্তি
                     </button>
@@ -45,6 +49,11 @@ function Apply() {
                     >
                         পরবর্তি
                     </button>
+                </div>
+                {/* login link */}
+                <div className="loginLink">
+                    পূর্বেই সদস্য হয়েছেন? এখানে{" "}
+                    <Link to="/enter">প্রবেশ করুন</Link>
                 </div>
             </div>
 

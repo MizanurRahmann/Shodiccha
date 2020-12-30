@@ -1,0 +1,48 @@
+.applyDesc {
+    p {
+        font-size: 18px;
+    }
+    ul {
+        margin-top: 20px;
+        margin-left: 20px;
+        li {
+            font-size: 18px;
+        }
+    }
+    .type-selection {
+        width: 80%;
+        display: flex;
+        margin-top: 25px;
+
+        .type-wrapper {
+            width: 16vh;
+            height: 16vh;
+            margin-right: 32px;
+            background: #ccc;
+            margin-right: 32px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .type {
+                width: calc(16vh - 8px);
+                height: calc(16vh - 8px);
+                background: #fff;
+                border-radius: 10px;
+                font-size: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+            }
+        }
+        .type-wrapper.active {
+            background: linear-gradient(
+                -45deg,
+                var(--primary-color-dark),
+                var(--primary-color)
+            );
+            color: var(--primary-color-dark);
+        }
+    }
+}

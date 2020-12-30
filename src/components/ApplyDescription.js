@@ -3,7 +3,7 @@ import "../styles/ApplyDescription.scss";
 
 function ApplyDescription({ userType, chnageTo }) {
     return (
-        <div>
+        <div className="applyDesc">
             <p>
                 সদিচ্ছা ফাউন্ডেশন একটি অলাভজনক প্রতিষ্ঠান হওয়ার একজন সদস্যকে
                 অবশ্যই স্বার্থহীনভাবে মানবতার জন্য কাজ করে যেতে হবে। যেহেতু
@@ -25,17 +25,25 @@ function ApplyDescription({ userType, chnageTo }) {
             <div className="type-selection">
                 <div
                     className={
-                        userType === "volunteer" ? "type active" : "type"
+                        userType === "volunteer"
+                            ? "type-wrapper active"
+                            : "type-wrapper"
                     }
-                    onClick={() => chnageTo("volunteer")}
                 >
-                    সেচ্ছাসেবক
+                    <div className="type" onClick={() => chnageTo("volunteer")}>
+                        সেচ্ছাসেবক
+                    </div>
                 </div>
                 <div
-                    className={userType === "donour" ? "type active" : "type"}
-                    onClick={() => chnageTo("donour")}
+                    className={
+                        userType === "donour"
+                            ? "type-wrapper active"
+                            : "type-wrapper"
+                    }
                 >
-                    ডোনার
+                    <div className="type" onClick={() => chnageTo("donour")}>
+                        ডোনার
+                    </div>
                 </div>
             </div>
         </div>
