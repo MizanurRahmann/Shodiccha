@@ -25,6 +25,10 @@
     a:hover {
         color: var(--primary-color);
     }
+
+    a.active {
+        color: var(--primary-color);
+    }
 }
 
 .navforviwer.active {
