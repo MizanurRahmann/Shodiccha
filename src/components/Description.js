@@ -26,7 +26,7 @@ function Description() {
                         ry="2"
                     ></rect>
                 </svg>
-                <h1>পরিচিতি</h1>
+                <h1>প্রেরণা</h1>
             </div>
             <div className="description__text">
                 <p>
