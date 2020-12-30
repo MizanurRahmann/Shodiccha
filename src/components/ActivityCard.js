@@ -5,7 +5,6 @@ import "../styles/ActivityCard.scss";
 import help from "../assets/images/help-1.jpeg";
 import hand from "../assets/images/hand.svg";
 import dollar from "../assets/images/dollar.svg";
-import heart from "../assets/images/heart.svg";
 
 function ActivityCard(props) {
     return (
