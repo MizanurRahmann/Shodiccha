@@ -1,0 +1,24 @@
+.applyForm {
+    form {
+        margin-top: 20px;
+        input {
+            width: calc(100% - 30px);
+            padding: 15px !important;
+            margin-top: 20px;
+            border: 1.5px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+            font-family: SHOBUJ;
+            color: var(--texy-color);
+            outline: none;
+        }
+
+        .input-block {
+            display: flex;
+            input {
+                width: 50%;
+                margin-right: 20px;
+            }
+        }
+    }
+}
