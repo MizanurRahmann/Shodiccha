@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/NavForViewer.scss";
 
 function NavForViewer() {
@@ -16,11 +16,18 @@ function NavForViewer() {
     window.addEventListener("scroll", changeBackground);
 
     return (
-        <div className={whiteBackground ? "navforviwer active" : "navforviwer"}>
+        <div
+            className={
+                whiteBackground ? "navforviwer white-active" : "navforviwer"
+            }
+        >
+            <NavLink to="/" exact={true}>
+                হোম
+            </NavLink>
             <NavLink to="/apply">সদস্য হোন</NavLink>
-            <Link to="/enter">প্রবেশ করুন</Link>
-            <Link to="/application">আবেদন করুন</Link>
-            <Link to="/query">প্রশ্ন করুন</Link>
+            <NavLink to="/enter">প্রবেশ করুন</NavLink>
+            <NavLink to="/application">আবেদন করুন</NavLink>
+            <NavLink to="/query">প্রশ্ন করুন</NavLink>
         </div>
     );
 }
