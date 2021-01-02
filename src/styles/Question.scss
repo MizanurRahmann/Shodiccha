@@ -1,0 +1,50 @@
+.question {
+    width: 60%;
+    padding: 100px 50px 0 100px;
+    font-family: SHOBUJ;
+    color: var(--text-color);
+
+    h1 {
+        font-size: 3.5rem;
+        color: var(--primary-color-dark);
+        text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input,
+        textarea,
+        select {
+            padding: 10px !important;
+            margin-top: 20px;
+            border: 1.5px solid #ccc;
+            border-radius: 5px;
+            font-size: 18px;
+            font-family: SHOBUJ;
+            color: var(--texy-color);
+            outline: none;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 32px;
+            background: var(--primary-color-dark);
+            color: #fff;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+
+            &:hover {
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import About from "./pages/About";
 import Apply from "./pages/Apply";
 import Enter from "./pages/Enter";
+import Question from "./pages/Qestion";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Route exact path="/" component={About} />
                 <Route exact path="/apply" component={Apply} />
                 <Route exact path="/enter" component={Enter} />
+                <Route exact path="/query" component={Question} />
             </Router>
         </div>
     );
