@@ -25,17 +25,6 @@ function ApplyDescription({ userType, chnageTo }) {
             <div className="type-selection">
                 <div
                     className={
-                        userType === "volunteer"
-                            ? "type-wrapper active"
-                            : "type-wrapper"
-                    }
-                >
-                    <div className="type" onClick={() => chnageTo("volunteer")}>
-                        সেচ্ছাসেবক
-                    </div>
-                </div>
-                <div
-                    className={
                         userType === "donour"
                             ? "type-wrapper active"
                             : "type-wrapper"
@@ -43,6 +32,31 @@ function ApplyDescription({ userType, chnageTo }) {
                 >
                     <div className="type" onClick={() => chnageTo("donour")}>
                         ডোনার
+                    </div>
+                </div>
+                <div
+                    className={
+                        userType === "regularDonour"
+                            ? "type-wrapper active"
+                            : "type-wrapper"
+                    }
+                >
+                    <div
+                        className="type"
+                        onClick={() => chnageTo("regularDonour")}
+                    >
+                        নিয়মিত ডোনার
+                    </div>
+                </div>
+                <div
+                    className={
+                        userType === "volunteer"
+                            ? "type-wrapper active"
+                            : "type-wrapper"
+                    }
+                >
+                    <div className="type" onClick={() => chnageTo("volunteer")}>
+                        সেচ্ছাসেবক
                     </div>
                 </div>
             </div>
