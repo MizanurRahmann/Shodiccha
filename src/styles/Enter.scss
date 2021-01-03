@@ -16,6 +16,22 @@
             color: var(--primary-color-dark);
             text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
         }
+        .loginLink,
+        p {
+            font-size: 18px;
+            color: var(--text-color);
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            color: var(--primary-color-dark);
+            transition: 0.3s;
+
+            &:hover {
+                color: var(--primary-color);
+            }
+        }
 
         form {
             margin-top: 20px;
@@ -26,21 +42,23 @@
                 width: 70%;
                 padding: 15px !important;
                 margin-top: 20px;
-                border: 1.5px solid #ccc;
+                border: 2.5px solid #ccc;
                 border-radius: 5px;
                 font-size: 18px;
                 font-family: SHOBUJ;
                 color: var(--texy-color);
                 outline: none;
+                background: #fff;
+                color: #000;
+
+                &:focus {
+                    border: 2.5px solid var(--primary-color);
+                }
             }
             button {
                 width: 70%;
-                margin-top: 20px;
-                background: linear-gradient(
-                    -145deg,
-                    var(--primary-color-dark),
-                    var(--primary-color)
-                );
+                margin: 20px 0;
+                background: var(--primary-color-dark);
                 color: #fff;
                 padding: 10px 32px;
                 font-size: 20px;
