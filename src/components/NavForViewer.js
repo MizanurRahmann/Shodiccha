@@ -26,7 +26,7 @@ function NavForViewer() {
             </NavLink>
             <NavLink to="/apply">সদস্য হোন</NavLink>
             <NavLink to="/enter">প্রবেশ করুন</NavLink>
-            <NavLink to="/application">আবেদন করুন</NavLink>
+            <NavLink to="/help">আবেদন করুন</NavLink>
             <NavLink to="/query">প্রশ্ন করুন</NavLink>
         </div>
     );

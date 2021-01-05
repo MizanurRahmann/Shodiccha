@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Apply from "./pages/Apply";
 import Enter from "./pages/Enter";
 import Question from "./pages/Qestion";
+import Help from "./pages/Help";
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                 <Route exact path="/apply" component={Apply} />
                 <Route exact path="/enter" component={Enter} />
                 <Route exact path="/query" component={Question} />
+                <Route exact path="/help" component={Help} />
             </Router>
         </div>
     );

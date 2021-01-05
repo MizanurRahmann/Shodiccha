@@ -7,6 +7,7 @@ import volunteer from "../assets/images/volunteer.svg";
 import NavForViewer from "../components/NavForViewer";
 import ApplyDescription from "../components/ApplyDescription";
 import ApplyForm from "../components/ApplyForm";
+import FormPageStyle from "../components/FormPageStyle";
 
 function Apply() {
     const [state, setState] = useState(0);
@@ -56,26 +57,7 @@ function Apply() {
                     <Link to="/enter">প্রবেশ করুন</Link>
                 </div>
             </div>
-
-            <div className="apply__line"></div>
-            <div className="apply__image-block">
-                <img src={volunteer} alt="" />
-            </div>
-
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="180"
-                height="180"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="feather feather-square square"
-            >
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-            </svg>
+            <FormPageStyle image={volunteer} component="apply" />
         </div>
     );
 }
