@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Enter.scss";
 import login from "../assets/images/login.svg";
+
+// Components
 import NavForViewer from "../components/NavForViewer";
 import FormPageStyle from "../components/FormPageStyle";
 
@@ -21,12 +23,15 @@ function Enter() {
         <div className="enter">
             <NavForViewer />
             <div className="enter__content">
+                {/* HEADING */}
                 <h1 className="primary__heading">প্রবেশ করুন</h1>
                 <p className="primary__heading-text">
                     লগ ইন করতে আপনি আপনার ব্যবহত ইমেইল ও পাসওয়ার্ডটা দিন। লগইন
                     করার মাধ্যমে আপনি আপনার একাউন্টের ও সদিচ্ছার চলমান একটিভিটি
                     সম্পর্কে জানতে পারবেন।
                 </p>
+
+                {/* ENTER FORM */}
                 <form>
                     <input
                         type="email"
@@ -44,12 +49,15 @@ function Enter() {
                         প্রবেশ
                     </button>
                 </form>
-                {/* login link */}
+
+                {/* APPLY LINK */}
                 <div className="loginLink">
                     আপনি ফাউন্ডেশনের সদস্য নন?{" "}
                     <Link to="/enter">সদস্য হোন</Link>
                 </div>
             </div>
+
+            {/* FORM PAGE STYLES */}
             <FormPageStyle image={login} component="enter" />
         </div>
     );

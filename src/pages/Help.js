@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Help.scss";
+
+// Components
 import NavForViewer from "../components/NavForViewer";
 
 function Help() {
@@ -11,6 +13,7 @@ function Help() {
         <div className="help">
             <NavForViewer />
             <div className="help__content">
+                {/* HEADING */}
                 <h1 className="primary__heading">সাহায্যের জন্য আবেদন করুন</h1>
                 <p className="primary__heading-text">
                     সাহায্যের আবেদনের জন্য অবশ্যই আপনার সঠিক তথ্যাদি ও আপনার
@@ -20,6 +23,7 @@ function Help() {
                     করতে পারবো?
                 </p>
 
+                {/* HELP FORM */}
                 <form>
                     <input
                         type="text"

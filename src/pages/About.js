@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/About.scss";
 
 // Components
 import Banner from "../components/Banner";
@@ -10,7 +9,7 @@ import NavForViewer from "../components/NavForViewer";
 
 function About() {
     return (
-        <div className="about">
+        <div style={{ padding: "100px" }}>
             <NavForViewer />
             <Banner />
             <Description />

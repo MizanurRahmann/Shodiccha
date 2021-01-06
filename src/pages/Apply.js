@@ -20,10 +20,11 @@ function Apply() {
     return (
         <div className="apply">
             <NavForViewer />
+
             <div className="apply__content">
                 <h1 className="primary__heading">সদস্যের আবেদন</h1>
 
-                {/* 1st Page */}
+                {/* 1st PAGE */}
                 {state === 0 ? (
                     <ApplyDescription
                         chnageTo={setUserType}
@@ -31,10 +32,10 @@ function Apply() {
                     />
                 ) : null}
 
-                {/* 2nd Page */}
+                {/* 2nd PAGE */}
                 {state === 1 ? <ApplyForm /> : null}
 
-                {/* button group */}
+                {/* BUTTON GROUPS */}
                 <div className="button-group">
                     <button
                         type="button"
@@ -51,12 +52,15 @@ function Apply() {
                         পরবর্তি
                     </button>
                 </div>
-                {/* login link */}
+
+                {/* ENTER LINK */}
                 <div className="loginLink">
                     পূর্বেই সদস্য হয়েছেন? এখানে{" "}
                     <Link to="/enter">প্রবেশ করুন</Link>
                 </div>
             </div>
+
+            {/* FORM PAGE STYLES */}
             <FormPageStyle image={volunteer} component="apply" />
         </div>
     );

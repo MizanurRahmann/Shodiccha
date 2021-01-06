@@ -19,6 +19,8 @@ function Qestion() {
     return (
         <div className="question">
             <NavForViewer />
+
+            {/* HEADING */}
             <h1 className="primary__heading">প্রশ্ন করুন</h1>
             <p className="primary__heading-text">
                 আমাদের সংগঠন সম্পর্কিত আপনার যে কোনো প্রশ্ন থাকলে অথবা আমাদের
@@ -26,6 +28,8 @@ function Qestion() {
                 জানাতে পারে। আপনার প্রশ্নের উত্তর বা পরবর্তিতে আপনার সাথে
                 যোগাযোগের জন্য আপনার মেসেজের সাথে আপনার ইমেইলটি সংযুক্ত করে দিন।
             </p>
+
+            {/* QUESTION FORM */}
             <form>
                 <input
                     type="email"
@@ -65,6 +69,8 @@ function Qestion() {
                 ></textarea>
                 <button onClick={questionLogicFunc}>সাবমিট</button>
             </form>
+
+            {/* FORM PAGE STYLES */}
             <FormPageStyle image={question} component={"question"} />
         </div>
     );
