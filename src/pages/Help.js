@@ -11,8 +11,8 @@ function Help() {
         <div className="help">
             <NavForViewer />
             <div className="help__content">
-                <h1>সাহায্যের জন্য আবেদন করুন</h1>
-                <p>
+                <h1 className="primary__heading">সাহায্যের জন্য আবেদন করুন</h1>
+                <p className="primary__heading-text">
                     সাহায্যের আবেদনের জন্য অবশ্যই আপনার সঠিক তথ্যাদি ও আপনার
                     সাহায্য চাওয়ার বিস্তারিত কারন লিখুন। আমাদের টিম যতোদ্রুত
                     সম্ভব আপনার তথ্য যাচাই করে আপনাকে জানিয়ে দিবে আপনার

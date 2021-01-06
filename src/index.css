@@ -31,3 +31,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+h1.primary__heading {
+    font-size: 3.5rem;
+    color: var(--primary-color-dark);
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+}
+p.primary__heading-text {
+    font-size: 18px;
+    color: var(--text-color);
+}

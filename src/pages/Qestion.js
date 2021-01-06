@@ -19,8 +19,8 @@ function Qestion() {
     return (
         <div className="question">
             <NavForViewer />
-            <h1>প্রশ্ন করুন</h1>
-            <p>
+            <h1 className="primary__heading">প্রশ্ন করুন</h1>
+            <p className="primary__heading-text">
                 আমাদের সংগঠন সম্পর্কিত আপনার যে কোনো প্রশ্ন থাকলে অথবা আমাদের
                 সংগঠনের উন্নতির জন্য কোনো পরামর্শ থাকলে আমাদেরকে মেসেজের মাধ্যমে
                 জানাতে পারে। আপনার প্রশ্নের উত্তর বা পরবর্তিতে আপনার সাথে
