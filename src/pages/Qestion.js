@@ -71,7 +71,7 @@ function Qestion() {
             </form>
 
             {/* FORM PAGE STYLES */}
-            <FormPageStyle image={question} component={"question"} />
+            <FormPageStyle image={question} />
         </div>
     );
 }

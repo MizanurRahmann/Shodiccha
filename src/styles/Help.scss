@@ -76,4 +76,11 @@
             }
         }
     }
+    svg.square {
+        position: absolute;
+        right: calc(30vh - 90px);
+        top: 20vh;
+        transform: rotate(45deg);
+        color: var(--primary-color-light);
+    }
 }

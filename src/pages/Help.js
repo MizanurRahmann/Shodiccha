@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import "../styles/Help.scss";
-import "../styles/ApplyForm.scss";
+import "../styles/Form.scss";
+import wallet from "../assets/images/wallet.svg";
 
 // Components
 import NavForViewer from "../components/NavForViewer";
+import FormPageStyle from "../components/FormPageStyle";
 
 function Help() {
     const [name, setName] = useState("");
     const [medium, setMedium] = useState("self");
-    const [location, setLocation] = useState("");
 
     return (
         <div className="help">
@@ -76,6 +77,8 @@ function Help() {
                     </form>
                 </div>
             </div>
+
+            <FormPageStyle image={wallet} component="apply" />
         </div>
     );
 }

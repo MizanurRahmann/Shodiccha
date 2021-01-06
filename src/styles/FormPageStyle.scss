@@ -1,0 +1,31 @@
+.line {
+    width: 25vw;
+    height: 80vh;
+    background: linear-gradient(
+        -235deg,
+        var(--primary-color-dark),
+        var(--primary-color)
+    );
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 51% 95%, 0 90%);
+    position: absolute;
+    top: 0;
+    right: 30vh;
+
+    &__image-block {
+        width: 30%;
+        position: absolute;
+        right: 30vh;
+        top: 50vh;
+        img {
+            width: 100%;
+            max-height: 35vh;
+        }
+    }
+    svg.square {
+        position: absolute;
+        right: calc(30vh - 90px);
+        top: 20vh;
+        transform: rotate(45deg);
+        color: var(--primary-color-light);
+    }
+}

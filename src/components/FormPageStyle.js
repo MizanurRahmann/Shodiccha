@@ -1,10 +1,11 @@
 import React from "react";
+import "../styles/FormPageStyle.scss";
 
 function FormPageStyle({ component, image }) {
     return (
         <>
-            <div className={`${component}__line`}></div>
-            <div className={`${component}__image-block`}>
+            <div className="line"></div>
+            <div className="line__image-block">
                 <img src={image} alt="" />
             </div>
             <svg
