@@ -21,7 +21,7 @@ function Apply() {
         <div className="apply">
             <NavForViewer />
             <div className="apply__content">
-                <h1>সদস্যের আবেদন</h1>
+                <h1 className="primary__heading">সদস্যের আবেদন</h1>
 
                 {/* 1st Page */}
                 {state === 0 ? (

@@ -4,7 +4,7 @@ import "../styles/ApplyDescription.scss";
 function ApplyDescription({ userType, chnageTo }) {
     return (
         <div className="applyDesc">
-            <p>
+            <p className="primary__heading-text">
                 সদিচ্ছা ফাউন্ডেশন একটি অলাভজনক প্রতিষ্ঠান হওয়ার একজন সদস্যকে
                 অবশ্যই স্বার্থহীনভাবে মানবতার জন্য কাজ করে যেতে হবে। যেহেতু
                 আমাদের প্রতিষ্ঠানের যাবতীয় অর্থ সম্পদ আমাদের সদস্যদের তরফ থেকে
