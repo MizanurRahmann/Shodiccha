@@ -80,36 +80,4 @@
             }
         }
     }
-
-    &__line {
-        width: 25vw;
-        height: 80vh;
-        background: linear-gradient(
-            to left,
-            var(--primary-color-dark),
-            var(--primary-color)
-        );
-        clip-path: polygon(0 0, 100% 0%, 100% 92%, 56% 96%, 0 100%);
-        position: absolute;
-        top: 0;
-        right: 30vh;
-    }
-
-    &__image-block {
-        width: 30%;
-        position: absolute;
-        right: 35vh;
-        top: 47vh;
-        img {
-            width: 100%;
-            transform: rotateY(180deg);
-        }
-    }
-    svg.square {
-        position: absolute;
-        right: calc(30vh - 90px);
-        top: 20vh;
-        transform: rotate(45deg);
-        color: var(--primary-color-light);
-    }
 }

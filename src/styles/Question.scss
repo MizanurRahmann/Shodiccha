@@ -78,36 +78,4 @@
             }
         }
     }
-
-    &__line {
-        width: 25vw;
-        height: 85vh;
-        background: linear-gradient(
-            to left,
-            var(--primary-color-dark),
-            var(--primary-color)
-        );
-        clip-path: polygon(0 0, 100% 0%, 100% 92%, 56% 96%, 0 100%);
-        position: absolute;
-        top: 0;
-        right: 20vh;
-    }
-
-    &__image-block {
-        width: 30%;
-        position: absolute;
-        right: 20vh;
-        top: 40vh;
-        img {
-            height: 50vh;
-        }
-    }
-
-    svg.square {
-        position: absolute;
-        right: calc(20vh - 90px);
-        top: 20vh;
-        transform: rotate(45deg);
-        color: var(--primary-color-light);
-    }
 }
