@@ -10,6 +10,7 @@ import FormPageStyle from "../components/FormPageStyle";
 function Help() {
     const [name, setName] = useState("");
     const [medium, setMedium] = useState("self");
+    const [description, setDescription] = useState("");
 
     return (
         <div className="help">
@@ -71,9 +72,15 @@ function Help() {
                             <input type="text" placeholder="পোষ্ট" />
                         </div>
                         <div className="input-block">
-                            <input type="email" placeholder="থানা" />
+                            <input type="text" placeholder="থানা" />
                             <input type="text" placeholder="জেলা" />
                         </div>
+                        <textarea
+                            rows="10"
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
+                        ></textarea>
+                        <button>সাবমিট</button>
                     </form>
                 </div>
             </div>
