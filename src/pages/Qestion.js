@@ -1,6 +1,9 @@
 import React, { useState } from "react";
-import "../styles/Question.scss";
 import question from "../assets/images/question.svg";
+
+// Styles
+import "../styles/Question.scss";
+import "../styles/Form.scss";
 
 // Components
 import NavForViewer from "../components/NavForViewer";
@@ -30,45 +33,47 @@ function Qestion() {
             </p>
 
             {/* QUESTION FORM */}
-            <form>
-                <input
-                    type="email"
-                    placeholder="ইমেইল"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <div className="selectOptions">
-                    <select
-                        value={msgType}
-                        onChange={(e) => setmsgtype(e.target.value)}
-                    >
-                        <option value="advice">পরামর্শ</option>
-                        <option value="question">প্রশ্ন</option>
-                    </select>
-                    <div className="arrow">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="feather feather-chevron-down"
+            <div className="form-block">
+                <form>
+                    <input
+                        type="email"
+                        placeholder="ইমেইল"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    <div className="selectOptions">
+                        <select
+                            value={msgType}
+                            onChange={(e) => setmsgtype(e.target.value)}
                         >
-                            <polyline points="6 9 12 15 18 9"></polyline>
-                        </svg>
+                            <option value="advice">পরামর্শ</option>
+                            <option value="question">প্রশ্ন</option>
+                        </select>
+                        <div className="arrow">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="feather feather-chevron-down"
+                            >
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </div>
                     </div>
-                </div>
-                <textarea
-                    rows="6"
-                    value={msg}
-                    onChange={(e) => setMsg(e.target.value)}
-                ></textarea>
-                <button onClick={questionLogicFunc}>সাবমিট</button>
-            </form>
+                    <textarea
+                        rows="6"
+                        value={msg}
+                        onChange={(e) => setMsg(e.target.value)}
+                    ></textarea>
+                    <button onClick={questionLogicFunc}>সাবমিট</button>
+                </form>
+            </div>
 
             {/* FORM PAGE STYLES */}
             <FormPageStyle image={question} />

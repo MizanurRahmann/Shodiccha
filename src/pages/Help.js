@@ -27,7 +27,7 @@ function Help() {
                 </p>
 
                 {/* HELP FORM */}
-                <div className="applyForm">
+                <div className="form-block">
                     <form>
                         <input type="text" placeholder="সাহায্যের বিষয়" />
                         <div className="input-block">

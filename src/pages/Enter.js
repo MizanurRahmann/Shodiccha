@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../styles/Enter.scss";
 import login from "../assets/images/login.svg";
+
+// Styles
+import "../styles/Enter.scss";
+import "../styles/Form.scss";
 
 // Components
 import NavForViewer from "../components/NavForViewer";
@@ -10,11 +13,10 @@ import FormPageStyle from "../components/FormPageStyle";
 function Enter() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [error, setError] = useState("");
 
     const LoginLogic = (event) => {
         event.preventDefault();
-        console.log(`${email} ${password} ${error}`);
+        console.log(`${email} ${password} `);
         setEmail("");
         setPassword("");
     };
@@ -32,23 +34,25 @@ function Enter() {
                 </p>
 
                 {/* ENTER FORM */}
-                <form>
-                    <input
-                        type="email"
-                        placeholder="ইমেইল"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input
-                        type="password"
-                        placeholder="পাসওয়ার্ড"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button type="button" onClick={LoginLogic}>
-                        প্রবেশ
-                    </button>
-                </form>
+                <div className="form-block">
+                    <form>
+                        <input
+                            type="email"
+                            placeholder="ইমেইল"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <input
+                            type="password"
+                            placeholder="পাসওয়ার্ড"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <button type="button" onClick={LoginLogic}>
+                            প্রবেশ
+                        </button>
+                    </form>
+                </div>
 
                 {/* APPLY LINK */}
                 <div className="loginLink">

@@ -4,7 +4,7 @@ import "../styles/Form.scss";
 
 function ApplyForm() {
     return (
-        <div className="applyForm">
+        <div className="form-block">
             <p>
                 আপনার যাবতীয় তথ্য সঠিক কিনা তা নিশ্চিত হয়ে অতঃপর সাবমিট করুন।
                 যেকোনপ প্রকার তথ্য বা প্রশ্নের জন্য{" "}

@@ -27,48 +27,6 @@
             }
         }
 
-        form {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-
-            input {
-                width: 70%;
-                padding: 15px !important;
-                margin-top: 20px;
-                border: 2.5px solid #ccc;
-                border-radius: 5px;
-                font-size: 18px;
-                font-family: SHOBUJ;
-                color: var(--texy-color);
-                outline: none;
-                background: #fff;
-                color: #000;
-
-                &:focus {
-                    border: 2.5px solid var(--primary-color);
-                }
-            }
-            button {
-                width: 70%;
-                margin: 20px 0;
-                background: var(--primary-color-dark);
-                color: #fff;
-                padding: 10px 32px;
-                font-size: 20px;
-                font-family: SHOBUJ;
-                border-radius: 5px;
-                border: none;
-                outline: none;
-                cursor: pointer;
-                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-
-                &:hover {
-                    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-                }
-            }
-        }
-
         .regLink {
             font-size: 20px;
             a {
