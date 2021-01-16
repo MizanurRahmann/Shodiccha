@@ -8,15 +8,15 @@ import PastActivities from "../components/PastActivities";
 import NavForViewer from "../components/NavForViewer";
 
 function About() {
-    return (
-        <div style={{ padding: "100px" }}>
-            <NavForViewer />
-            <Banner />
-            <Description />
-            <Summary />
-            <PastActivities />
-        </div>
-    );
+  return (
+    <div style={{ padding: "100px" }}>
+      <NavForViewer />
+      <Banner />
+      <Description />
+      <Summary />
+      <PastActivities />
+    </div>
+  );
 }
 
 export default About;
