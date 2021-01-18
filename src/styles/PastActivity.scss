@@ -13,10 +13,17 @@
   h1 {
     width: 100%;
     font-family: SHOBUJ;
-    font-size: 4.4rem;
-    font-weight: normal;
+    font-size: 3.5rem;
     color: var(--primary-color-dark);
   }
+
+  .button_box {
+    position: absolute;
+    right: 40px;
+    top: 120px;
+    display: flex;
+  }
+
   &__slider-block {
     width: 100%;
     margin-top: 60px;

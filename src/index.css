@@ -48,7 +48,7 @@ p.primary__heading-text {
   border-radius: 40px;
 }
 .primary__btn {
-  color: var(--primary-color-dark) !important;
+  color: var(--primary-color-dark);
   border: 3px solid var(--primary-color-dark);
   transition: 0.4s;
 }
@@ -56,4 +56,21 @@ p.primary__heading-text {
   background: var(--primary-color-dark);
   color: #fff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+.round_btn {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  color: #ccc !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+}
+.round_btn:hover {
+  border: 2px solid #656565;
+  color: #000;
 }
