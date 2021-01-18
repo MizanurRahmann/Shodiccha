@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../styles/Description.scss";
 
 // Assets
@@ -44,6 +45,12 @@ function Description() {
             মানুষদের জন্য কাজ করে যেনো, প্রতিটি মানুষ দ্বিধাহীনভাবে বিচরন করতে
             পারে, হাসতে পারে এবং সোনালী স্বপ্ন দেখতে পারে।
           </p>
+
+          <div style={{ margin: "40px 0" }}>
+            <Link to="/" className="btn primary__btn">
+              অধিক জানুন
+            </Link>
+          </div>
         </div>
       </div>
 

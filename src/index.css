@@ -41,3 +41,19 @@ p.primary__heading-text {
   font-size: 18px;
   color: var(--text-color);
 }
+
+.btn {
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 40px;
+}
+.primary__btn {
+  color: var(--text-color);
+  border: 3px solid var(--primary-color-dark);
+  transition: 0.3s;
+}
+.primary__btn:hover {
+  background: var(--primary-color-dark);
+  color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
