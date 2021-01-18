@@ -1,90 +1,90 @@
 .acard {
-    height: 60vh;
-    margin: 0 20px 10px 20px;
-    padding: 0;
+  height: 65vh;
+  margin: 0 20px 10px 20px;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  color: var(--text-color);
+  position: relative;
+
+  &__image {
+    height: 32vh;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-    color: var(--text-color);
-    position: relative;
 
-    &__image {
-        height: 29vh;
-        width: 100%;
-        border-radius: 10px;
+    img {
+      height: 100%;
+    }
+  }
 
-        img {
-            height: 100%;
-        }
+  &__content {
+    padding: 10px 30px;
+    width: 100%;
+
+    h2 {
+      font-family: SHOBUJ;
+      font-size: 1.5rem;
+    }
+    p {
+      font-size: 16px;
+      font-family: SHOBUJ;
+    }
+    p.date {
+      margin: 5px 0 20px 0;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      color: #ccc;
     }
 
-    &__content {
-        padding: 10px 30px;
-        width: 100%;
+    &__info {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      margin-right: 10px;
 
-        h2 {
-            font-family: SHOBUJ;
-            font-size: 1.5rem;
-        }
-        p {
-            font-size: 16px;
-            font-family: SHOBUJ;
-        }
-        p.date {
-            margin: 5px 0 20px 0;
-            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-            color: #ccc;
-        }
+      .logo {
+        font-size: 20px;
+        width: 25px;
+        height: 25px;
+        border-radius: 5px;
+        font-weight: bolder;
+        background: var(--primary-color-light);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        &__info {
-            display: flex;
-            align-items: center;
-            font-size: 20px;
-            margin-right: 10px;
-
-            .logo {
-                font-size: 20px;
-                width: 25px;
-                height: 25px;
-                border-radius: 5px;
-                font-weight: bolder;
-                background: var(--primary-color-light);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .value {
-                font-family: SHOBUJ;
-                margin-left: 10px;
-                font-size: 25px;
-            }
-        }
-
-        .readmore {
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-            background: var(--primary-color-light);
-            position: absolute;
-            bottom: 5px;
-            right: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: 0.4s;
-            cursor: pointer;
-
-            svg {
-                width: 20px;
-                height: 20px;
-                color: var(--primary-color-dark);
-                transition: 0.4s;
-            }
-
-            &:hover {
-                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-            }
-        }
+      .value {
+        font-family: SHOBUJ;
+        margin-left: 10px;
+        font-size: 25px;
+      }
     }
+
+    .readmore {
+      width: 60px;
+      height: 60px;
+      border-radius: 10px;
+      background: var(--primary-color-light);
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.4s;
+      cursor: pointer;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        color: var(--primary-color-dark);
+        transition: 0.4s;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
 }

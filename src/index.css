@@ -48,9 +48,9 @@ p.primary__heading-text {
   border-radius: 40px;
 }
 .primary__btn {
-  color: var(--text-color);
+  color: var(--primary-color-dark) !important;
   border: 3px solid var(--primary-color-dark);
-  transition: 0.3s;
+  transition: 0.4s;
 }
 .primary__btn:hover {
   background: var(--primary-color-dark);
