@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import "../styles/PastActivity.scss";
 import ActivityCard from "./ActivityCard";
 
 function PastActivities() {
+  const customSlider = useRef();
+
   const settings = {
-    arrows: true,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
@@ -18,7 +20,10 @@ function PastActivities() {
       <h1>সফল উদ্যোগসমূহ</h1>
 
       <div className="button_box">
-        <div className="round_btn">
+        <div
+          className="round_btn"
+          onClick={() => customSlider.current.slickPrev()}
+        >
           <svg
             width="24"
             height="24"
@@ -29,7 +34,10 @@ function PastActivities() {
             <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
           </svg>
         </div>
-        <div className="round_btn">
+        <div
+          className="round_btn"
+          onClick={() => customSlider.current.slickNext()}
+        >
           <svg
             width="24"
             height="24"
@@ -43,7 +51,11 @@ function PastActivities() {
       </div>
 
       <div className="pastact__slider-block">
-        <Slider {...settings} className="slider">
+        <Slider
+          ref={(slider) => (customSlider.current = slider)}
+          {...settings}
+          className="slider"
+        >
           <ActivityCard value={1} />
           <ActivityCard value={2} />
           <ActivityCard value={3} />
