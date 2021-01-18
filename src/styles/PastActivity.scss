@@ -1,5 +1,6 @@
 .pastact {
-  width: 100%;
+  width: calc(100% - 200px);
+  margin: auto;
   height: 100vh;
   padding: 100px 0;
   position: relative;

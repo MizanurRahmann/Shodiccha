@@ -1,4 +1,6 @@
 .description {
+  width: calc(100% - 200px);
+  margin: auto;
   margin-top: 55px;
   display: flex;
 
@@ -41,7 +43,7 @@
 }
 
 .workingon {
-  width: 90%;
+  width: calc(90% - 200px);
   min-height: 50vh;
   margin: auto;
   padding: 100px 0;

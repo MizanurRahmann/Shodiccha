@@ -1,5 +1,6 @@
 .banner {
-  width: 100%;
+  width: calc(100% - 200px);
+  margin: auto;
   height: 45vh;
   border-radius: 10px;
   padding: 25px;
