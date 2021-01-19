@@ -1,97 +1,99 @@
 .form-block {
-    p {
+  p {
+    font-size: 18px;
+    a {
+      text-decoration: none;
+      color: var(--primary-color-dark);
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  form {
+    margin-top: 20px;
+    input,
+    textarea {
+      width: calc(100% - 20px);
+      padding: 15px !important;
+      margin-top: 20px;
+      border: 2.5px solid #ccc;
+      border-radius: 5px;
+      font-size: 18px;
+      font-family: SHOBUJ;
+      background: #fff;
+      color: #000;
+      outline: none;
+
+      &:focus {
+        border: 2.5px solid var(--primary-color);
+      }
+    }
+
+    .input-block {
+      display: flex;
+      input {
+        width: 50%;
+        margin-right: 20px;
+      }
+    }
+
+    .selectOptions {
+      margin-top: 20px;
+      height: fit-content;
+      position: relative;
+
+      select {
+        padding: 15px !important;
+        width: calc(100% - 20px);
+        border-radius: 5px;
         font-size: 18px;
-        a {
-            text-decoration: none;
-            color: var(--primary-color-dark);
-            &:hover {
-                color: var(--primary-color);
-            }
+        border: 2.5px solid #ccc;
+        font-family: SHOBUJ;
+        background: #fff;
+        color: #000;
+        outline: none;
+        appearance: none;
+        cursor: pointer;
+
+        &:hover {
+          border: 2.5px solid var(--primary-color);
         }
+      }
+      .arrow {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        height: 55px;
+        width: 50px;
+        background: var(--primary-color-dark);
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 8px 8px 0;
+        color: #fff;
+      }
     }
 
-    form {
-        margin-top: 20px;
-        input,
-        textarea {
-            width: calc(100% - 20px);
-            padding: 15px !important;
-            margin-top: 20px;
-            border: 2.5px solid #ccc;
-            border-radius: 5px;
-            font-size: 18px;
-            font-family: SHOBUJ;
-            background: #fff;
-            color: #000;
-            outline: none;
+    button {
+      width: 10vw;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 10px 30px;
+      background: transparent;
+      border: 3px solid var(--primary-color-dark);
+      color: var(--primary-color-dark);
+      border-radius: 10px;
+      font-family: SHOBUJ;
+      font-size: 20px;
+      cursor: pointer;
 
-            &:focus {
-                border: 2.5px solid var(--primary-color);
-            }
-        }
-
-        .input-block {
-            display: flex;
-            input {
-                width: 50%;
-                margin-right: 20px;
-            }
-        }
-
-        .selectOptions {
-            margin-top: 20px;
-            height: fit-content;
-            position: relative;
-
-            select {
-                padding: 15px !important;
-                width: calc(100% - 20px);
-                border-radius: 5px;
-                font-size: 18px;
-                border: 2.5px solid #ccc;
-                font-family: SHOBUJ;
-                background: #fff;
-                color: #000;
-                outline: none;
-                appearance: none;
-                cursor: pointer;
-
-                &:hover {
-                    border: 2.5px solid var(--primary-color);
-                }
-            }
-            .arrow {
-                position: absolute;
-                top: 0;
-                right: 20px;
-                height: 55px;
-                width: 50px;
-                background: var(--primary-color-dark);
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 0 8px 8px 0;
-                color: #fff;
-            }
-        }
-
-        button {
-            width: calc(100% - 20px);
-            margin-top: 20px;
-            margin-bottom: 20px;
-            padding: 10px 32px;
-            background: var(--primary-color-dark);
-            color: #fff;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-            border-radius: 8px;
-            font-size: 18px;
-            font-weight: bold;
-            cursor: pointer;
-
-            &:hover {
-                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-            }
-        }
+      &:hover {
+        background: var(--primary-color-dark);
+        color: #fff;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
     }
+  }
 }

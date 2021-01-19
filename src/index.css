@@ -21,6 +21,8 @@
   --primary-color: #f8adb5;
   --primary-color-light: #f8d8d8;
   --primary-color-lighter: #fff6fa;
+  --secondary-color: #66a649;
+  --secondary-color-light: #76bf54;
   --text-color: #444;
   --primary-font: "Quicksand", sans-serif;
   --primary-font-bold: "Fredoka One", cursive;
@@ -61,7 +63,7 @@ p.primary__heading-text {
 .btn {
   text-decoration: none;
   padding: 10px 40px;
-  border-radius: 40px;
+  border-radius: 10px;
 }
 .primary__btn {
   color: var(--primary-color-dark);
@@ -73,6 +75,22 @@ p.primary__heading-text {
   color: #fff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
+.btn {
+  text-decoration: none;
+  padding: 10px 40px;
+  border-radius: 10px;
+}
+.primary__btn {
+  color: var(--primary-color-dark);
+  border: 3px solid var(--primary-color-dark);
+  transition: 0.4s;
+}
+.primary__btn:hover {
+  background: var(--primary-color-dark);
+  color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
 .round_btn {
   width: 60px;
   height: 60px;
