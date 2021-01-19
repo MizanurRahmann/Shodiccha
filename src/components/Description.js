@@ -7,6 +7,7 @@ import education from "../assets/images/graduated.svg";
 import globe from "../assets/images/global.svg";
 import proverty from "../assets/images/money-bag.svg";
 import healthcare from "../assets/images/health.svg";
+import flower1 from "../assets/images/flower-3.svg";
 
 function Description() {
   return (
@@ -51,6 +52,13 @@ function Description() {
               অধিক জানুন
             </Link>
           </div>
+        </div>
+
+        <div className="flower-left">
+          <img src={flower1} alt="" />
+        </div>
+        <div className="flower-right">
+          <img src={flower1} alt="" />
         </div>
       </div>
 

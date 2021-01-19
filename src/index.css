@@ -42,6 +42,22 @@ p.primary__heading-text {
   color: var(--text-color);
 }
 
+.flat__heading {
+  width: 100%;
+  margin-bottom: 60px;
+  text-align: center;
+  font-family: SHOBUJ;
+}
+.flat__heading p {
+  font-size: 2rem;
+  color: var(--text-color);
+  font-family: RONGDHONU;
+}
+.flat__heading h1 {
+  font-size: 3.5rem;
+  color: var(--primary-color-dark);
+}
+
 .btn {
   text-decoration: none;
   padding: 10px 40px;

@@ -1,11 +1,13 @@
 .description {
-  width: calc(100% - 200px);
-  margin: auto;
+  width: 100%;
   margin-top: 55px;
+  position: relative;
+  overflow: hidden;
   display: flex;
 
   &__heading {
     width: 50%;
+    padding: 0 0 0 100px;
     font-family: SHOBUJ;
     font-size: 4rem;
     color: var(--primary-color-dark);
@@ -29,6 +31,7 @@
 
   &__text {
     width: 50%;
+    padding: 0 100px 0 0;
     font-family: SHOBUJ;
     font-size: 20px;
     color: var(--text-color);
@@ -40,13 +43,33 @@
       border-radius: 3px;
     }
   }
+
+  .flower-left {
+    position: absolute;
+    bottom: 0;
+    left: -40px;
+    img {
+      width: 13rem;
+      transform: rotate(90deg);
+    }
+  }
+  .flower-right {
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+    transform: rotateY(180deg);
+    img {
+      width: 13rem;
+      transform: rotate(90deg);
+    }
+  }
 }
 
 .workingon {
   width: calc(90% - 200px);
   min-height: 50vh;
   margin: auto;
-  padding: 100px 0;
+  padding: 50px 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

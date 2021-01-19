@@ -6,7 +6,7 @@ import Description from "../components/Description";
 import Summary from "../components/Summary";
 import PastActivities from "../components/PastActivities";
 import NavForViewer from "../components/NavForViewer";
-import ApplyForVolunteer from "../components/ApplyForVolunteer";
+import Members from "../components/Members";
 
 function About() {
   return (
@@ -16,7 +16,7 @@ function About() {
       <Description />
       <Summary />
       <PastActivities />
-      <ApplyForVolunteer />
+      <Members />
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.applyForVolunteer {
+  width: 100%;
+  min-height: 100vh;
+  margin-top: 100px;
+  padding: 60px 100px;
+  background: #f7f4f2;
+
+  h1.big {
+    font-family: RONGDHONU;
+    font-size: 15rem;
+    font-weight: normal;
+    text-align: center;
+    color: var(--primary-color);
+  }
+  h2 {
+    margin-left: 40px;
+    margin-top: -100px;
+    font-size: 2rem;
+    font-family: SHOBUJ;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: normal;
+    span {
+      font-weight: bold;
+    }
+  }
+}
