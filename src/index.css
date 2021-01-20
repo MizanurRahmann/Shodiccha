@@ -21,11 +21,10 @@
   --primary-color: #f8adb5;
   --primary-color-light: #f8d8d8;
   --primary-color-lighter: #fff6fa;
+
   --secondary-color: #66a649;
   --secondary-color-light: #76bf54;
   --text-color: #444;
-  --primary-font: "Quicksand", sans-serif;
-  --primary-font-bold: "Fredoka One", cursive;
 }
 
 * {

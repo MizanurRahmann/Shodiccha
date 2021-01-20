@@ -1,9 +1,10 @@
-.applyForVolunteer {
+.members-block {
   width: 100%;
   min-height: 100vh;
   margin-top: 100px;
   padding: 60px 100px;
   background: #f7f4f2;
+  position: relative;
 
   h1.big {
     font-family: RONGDHONU;
@@ -12,16 +13,94 @@
     text-align: center;
     color: var(--primary-color);
   }
-  h2 {
-    margin-left: 40px;
-    margin-top: -100px;
-    font-size: 2rem;
-    font-family: SHOBUJ;
-    text-align: center;
-    color: var(--text-color);
-    font-weight: normal;
-    span {
-      font-weight: bold;
+
+  .flowers {
+    width: 100%;
+    height: 30vh;
+    position: absolute;
+    top: -90px;
+    left: 0;
+    overflow: hidden;
+    .flower-left {
+      position: absolute;
+      left: -40px;
+      img {
+        width: 13rem;
+        transform: rotate(90deg);
+      }
+    }
+    .flower-right {
+      position: absolute;
+      right: -40px;
+      transform: rotateY(180deg);
+      img {
+        width: 13rem;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  .members {
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    .member-card {
+      width: 30%;
+      height: 40vh;
+      // background: #fff;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.412);
+      img {
+        width: 80%;
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+      }
+      .info {
+        padding: 20px;
+        h2 {
+          font-family: SHOBUJ;
+          font-weight: normal;
+          color: var(--text-color);
+          font-size: 18px;
+        }
+        .desegnition {
+          width: fit-content;
+          margin-top: 5px;
+          padding: 5px 10px;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+
+          .round {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 5px;
+          }
+          font-family: SHOBUJ;
+          font-size: 16px;
+        }
+
+        .social-links {
+          display: flex;
+          align-items: center;
+
+          a {
+            margin-left: 5px;
+            &:hover {
+              color: var(--primary-color);
+            }
+          }
+
+          svg {
+            margin-top: 10px;
+            color: var(--primary-color-dark);
+          }
+        }
+      }
     }
   }
 }
