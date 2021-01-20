@@ -11,7 +11,6 @@ import member5 from "../assets/images/member-5.png";
 import member6 from "../assets/images/member-6.png";
 import member7 from "../assets/images/member-7.png";
 import member8 from "../assets/images/member-8.png";
-import member9 from "../assets/images/member-10.png";
 
 // Components
 import MemberCard from "./MemberCard";
@@ -66,14 +65,14 @@ function ApplyForVolunteer() {
           marginTop: "60px",
         }}
       >
-        <MembersCardCircle name={"মোঃ মেহেদি হাসান"} image={member4} />
-        <MembersCardCircle name={"তফাজ্জল করিম"} image={member3} />
-        <MembersCardCircle name={"জয়নাল শেখ"} image={member6} />
-        <MembersCardCircle name={"শরিফা কবির"} image={member8} />
-        <MembersCardCircle name={"জয়নাল শেখ"} image={member6} />
-        <MembersCardCircle name={"নাছরিন আক্তার"} image={member9} />
-        <MembersCardCircle name={"মোঃ কামাল হোসেন"} image={member5} />
-        <MembersCardCircle name={"মোঃ আবু নাসের নাঈম"} image={member7} />
+        <MembersCardCircle name={"মোঃ মেহেদি হাসান"} image={member1} />
+        <MembersCardCircle name={"তফাজ্জল করিম"} image={member2} />
+        <MembersCardCircle name={"জয়নাল শেখ"} image={member3} />
+        <MembersCardCircle name={"শরিফা কবির"} image={member4} />
+        <MembersCardCircle name={"জয়নাল শেখ"} image={member5} />
+        <MembersCardCircle name={"নাছরিন আক্তার"} image={member6} />
+        <MembersCardCircle name={"মোঃ কামাল হোসেন"} image={member7} />
+        <MembersCardCircle name={"মোঃ আবু নাসের নাঈম"} image={member8} />
       </div>
     </div>
   );

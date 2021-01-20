@@ -1,0 +1,44 @@
+.recentActivity {
+  display: flex;
+
+  .heading {
+    width: 30%;
+    min-height: 20vh;
+    padding: 100px 40px 0 100px;
+    font-family: SHOBUJ;
+    font-size: 18px;
+    font-weight: normal;
+    color: var(--text-color);
+
+    p.head-text {
+      font-family: RONGDHONU;
+      font-size: 30px;
+      line-height: 30px;
+      margin-bottom: 10px;
+      color: var(--text-color);
+    }
+    h1 {
+      width: 100%;
+      margin-bottom: 10px;
+      font-family: SHOBUJ;
+      font-size: 3.5rem;
+      line-height: 3.5rem;
+      color: var(--primary-color-dark);
+    }
+  }
+
+  .slider-block {
+    width: 70%;
+    padding: 100px 100px 0 20px;
+    min-height: 50vh !important;
+
+    .slider.recent {
+      .acard {
+        height: 50vh;
+        &__image {
+          height: 22vh;
+        }
+      }
+    }
+  }
+}

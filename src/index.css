@@ -93,7 +93,7 @@ p.primary__heading-text {
 .round_btn {
   width: 60px;
   height: 60px;
-  margin: 0 10px;
+  margin-right: 10px;
   border: 2px solid #ccc;
   border-radius: 50%;
   color: #ccc !important;
