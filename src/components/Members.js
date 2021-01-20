@@ -6,9 +6,16 @@ import flower from "../assets/images/flower-3.svg";
 import member1 from "../assets/images/member-2.png";
 import member2 from "../assets/images/member-3.png";
 import member3 from "../assets/images/member-4.png";
+import member4 from "../assets/images/member-1.png";
+import member5 from "../assets/images/member-5.png";
+import member6 from "../assets/images/member-6.png";
+import member7 from "../assets/images/member-7.png";
+import member8 from "../assets/images/member-8.png";
+import member9 from "../assets/images/member-10.png";
 
 // Components
 import MemberCard from "./MemberCard";
+import MembersCardCircle from "./MembersCardCircle";
 
 function ApplyForVolunteer() {
   return (
@@ -29,7 +36,8 @@ function ApplyForVolunteer() {
         </div>
       </div>
 
-      <div className="members" style={{ width: "60%", margin: "auto" }}>
+      {/* ---------- Team Members --------- */}
+      {/* <div className="members" style={{ width: "60%", margin: "auto" }}>
         <MemberCard
           image={member1}
           name="বারিক সাদিক"
@@ -47,6 +55,25 @@ function ApplyForVolunteer() {
           name="সাব্বির হাসান রেজা"
           desegnition="Editor"
         />
+      </div> */}
+
+      {/* --------- Volenteers ---------- */}
+      <div
+        className="members"
+        style={{
+          width: "90%",
+          margin: "auto",
+          marginTop: "60px",
+        }}
+      >
+        <MembersCardCircle name={"মোঃ মেহেদি হাসান"} image={member4} />
+        <MembersCardCircle name={"তফাজ্জল করিম"} image={member3} />
+        <MembersCardCircle name={"জয়নাল শেখ"} image={member6} />
+        <MembersCardCircle name={"শরিফা কবির"} image={member8} />
+        <MembersCardCircle name={"জয়নাল শেখ"} image={member6} />
+        <MembersCardCircle name={"নাছরিন আক্তার"} image={member9} />
+        <MembersCardCircle name={"মোঃ কামাল হোসেন"} image={member5} />
+        <MembersCardCircle name={"মোঃ আবু নাসের নাঈম"} image={member7} />
       </div>
     </div>
   );

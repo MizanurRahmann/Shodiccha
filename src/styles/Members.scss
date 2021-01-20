@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 100vh;
   margin-top: 100px;
-  padding: 60px 100px;
+  padding: 60px 100px 20px 100px;
   background: #f7f4f2;
   position: relative;
 
@@ -44,10 +44,12 @@
     min-height: 40vh;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    // Rectangular Card for members
     .member-card {
       width: 30%;
       height: 40vh;
-      // background: #fff;
       position: relative;
       overflow: hidden;
       border-radius: 10px;
@@ -57,6 +59,7 @@
         position: absolute;
         right: -20px;
         bottom: 0;
+        transition: 0.3s;
       }
       .info {
         padding: 20px;
@@ -65,6 +68,7 @@
           font-weight: normal;
           color: var(--text-color);
           font-size: 18px;
+          transition: 0.3s;
         }
         .desegnition {
           width: fit-content;
@@ -100,6 +104,47 @@
             color: var(--primary-color-dark);
           }
         }
+      }
+
+      &:hover > img {
+        transform: scale(1.2);
+      }
+      &:hover > .info h2 {
+        font-size: 20px;
+      }
+    }
+
+    // Circle Card for members
+    .member-card-circle {
+      width: 25%;
+      margin-bottom: 60px;
+      height: fit-content;
+      text-align: center;
+
+      img {
+        height: 20vh;
+        width: 20vh;
+        padding: 5px;
+        margin: 5px;
+        margin-bottom: 10px;
+        border-radius: 100%;
+        border: 5px solid;
+        border-left-color: var(--primary-color-light);
+        border-top-color: var(--primary-color);
+        border-bottom-color: var(--primary-color-dark);
+        border-right-color: var(--primary-color-dark);
+      }
+
+      h2 {
+        font-family: SHOBUJ;
+        font-size: 18px;
+        color: var(--text-color);
+      }
+
+      h3 {
+        font-family: RONGDHONU;
+        font-size: 16px;
+        font-weight: normal;
       }
     }
   }
