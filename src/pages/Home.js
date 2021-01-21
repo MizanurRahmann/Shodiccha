@@ -16,9 +16,9 @@ function About() {
       <Banner />
       <Description />
       <Summary />
-      <PastActivities />
-      <Members />
       <RecentActivity />
+      <Members />
+      <PastActivities />
     </div>
   );
 }

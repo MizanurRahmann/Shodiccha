@@ -13,7 +13,7 @@ import member7 from "../assets/images/member-7.png";
 import member8 from "../assets/images/member-8.png";
 
 // Components
-import MemberCard from "./MemberCard";
+// import MemberCard from "./MemberCard";
 import MembersCardCircle from "./MembersCardCircle";
 
 function ApplyForVolunteer() {
