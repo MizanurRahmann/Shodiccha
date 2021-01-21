@@ -14,7 +14,7 @@ import member8 from "../assets/images/member-8.png";
 
 // Components
 // import MemberCard from "./MemberCard";
-import MembersCardCircle from "./MembersCardCircle";
+import MembersCardCircle from "./Cards/MembersCardCircle";
 
 function ApplyForVolunteer() {
   return (

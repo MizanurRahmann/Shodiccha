@@ -6,8 +6,8 @@ import "../styles/Question.scss";
 import "../styles/Form.scss";
 
 // Components
-import NavForViewer from "../components/NavForViewer";
-import FormPageStyle from "../components/FormPageStyle";
+import NavForViewer from "../components/Navbar/NavForViewer";
+import FormPageStyle from "../components/Auth/FormPageStyle";
 
 function Qestion() {
   const [email, setEmail] = useState("");

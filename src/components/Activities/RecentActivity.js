@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-import ActivityCard from "./ActivityCard";
-import "../styles/RecentActivity.scss";
+import ActivityCard from "../Cards/ActivityCard";
+import "../../styles/RecentActivity.scss";
 
 function RecentActivity() {
   const settings = {

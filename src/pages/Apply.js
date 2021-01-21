@@ -4,10 +4,10 @@ import "../styles/Apply.scss";
 import volunteer from "../assets/images/volunteer.svg";
 
 // Components
-import NavForViewer from "../components/NavForViewer";
-import ApplyDescription from "../components/ApplyDescription";
-import ApplyForm from "../components/ApplyForm";
-import FormPageStyle from "../components/FormPageStyle";
+import NavForViewer from "../components/Navbar/NavForViewer";
+import ApplyDescription from "../components/Auth/ApplyDescription";
+import ApplyForm from "../components/Auth/ApplyForm";
+import FormPageStyle from "../components/Auth/FormPageStyle";
 
 function Apply() {
   const [state, setState] = useState(0);

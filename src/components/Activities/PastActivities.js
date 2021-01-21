@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import "../styles/PastActivity.scss";
-import ActivityCard from "./ActivityCard";
+import "../../styles/PastActivity.scss";
+import ActivityCard from "../Cards/ActivityCard";
 
 function PastActivities() {
   const customSlider = useRef();

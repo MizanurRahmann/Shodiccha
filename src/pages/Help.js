@@ -4,8 +4,8 @@ import "../styles/Form.scss";
 import wallet from "../assets/images/wallet.svg";
 
 // Components
-import NavForViewer from "../components/NavForViewer";
-import FormPageStyle from "../components/FormPageStyle";
+import NavForViewer from "../components/Navbar/NavForViewer";
+import FormPageStyle from "../components/Auth/FormPageStyle";
 
 function Help() {
   const [name, setName] = useState("");
