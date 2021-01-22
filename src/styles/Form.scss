@@ -32,9 +32,29 @@
 
     .input-block {
       display: flex;
-      input {
+      input,
+      .password-block {
         width: 50%;
         margin-right: 20px;
+      }
+      .password-block {
+        margin-top: 20px;
+        position: relative;
+        input {
+          margin-top: 0;
+          width: 100%;
+        }
+        svg.off,
+        svg.on {
+          width: 18px;
+          height: 18px;
+          color: var(--text-color);
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          cursor: pointer;
+        }
       }
     }
 

@@ -21,37 +21,6 @@ function ApplyDescription({ userType, chnageTo }) {
           ইভেন্টে শারীরিকভাবে উপস্থিত থাকা বাধ্যতামূলক।
         </li>
       </ul>
-      <div className="type-selection">
-        <div
-          className={
-            userType === "donour" ? "type-wrapper active" : "type-wrapper"
-          }
-        >
-          <div className="type" onClick={() => chnageTo("donour")}>
-            ডোনার
-          </div>
-        </div>
-        <div
-          className={
-            userType === "regularDonour"
-              ? "type-wrapper active"
-              : "type-wrapper"
-          }
-        >
-          <div className="type" onClick={() => chnageTo("regularDonour")}>
-            নিয়মিত ডোনার
-          </div>
-        </div>
-        <div
-          className={
-            userType === "volunteer" ? "type-wrapper active" : "type-wrapper"
-          }
-        >
-          <div className="type" onClick={() => chnageTo("volunteer")}>
-            সেচ্ছাসেবক
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
