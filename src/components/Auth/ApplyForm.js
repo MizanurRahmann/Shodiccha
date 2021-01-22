@@ -18,9 +18,7 @@ function ApplyForm(props) {
   const [errors, setErrors] = useState("");
 
   // Apply function logic
-  const apply = (e) => {
-    e.preventDefault();
-
+  const apply = () => {
     if (requiredFildsValidation() && passwordValidation()) {
       setLoading(true);
       setTimeout(() => {
