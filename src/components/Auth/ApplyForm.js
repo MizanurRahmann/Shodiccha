@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
 // STYLES
@@ -7,25 +7,63 @@ import "../../styles/Form.scss";
 function ApplyForm(props) {
   const [showPassword1, SetShowPassword1] = useState(false);
   const [showPassword2, SetShowPassword2] = useState(false);
-  const [name, setName] = useState("");
+  const [name, setName] = useState(null);
   const [occupation, setOccupation] = useState("");
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
   const [password, SetPassword] = useState("");
   const [confirmPassword, SetConfirmPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [errors, setErrors] = useState("");
 
-  const apply = () => {
-    console.log(
-      name,
-      occupation,
-      address,
-      mail,
-      phone,
-      address,
-      password,
+  // Apply function logic
+  const apply = (e) => {
+    e.preventDefault();
+
+    if (requiredFildsValidation() && passwordValidation()) {
+      setLoading(true);
+      setTimeout(() => {
+        // Apply logic --->
+        console.log("All Ok");
+
+        setErrors("");
+        setLoading(false);
+      }, 2000);
+    } else {
+      console.log("Failed");
+    }
+  };
+
+  // field requirements validation
+  const requiredFildsValidation = () => {
+    if (
+      name &&
+      occupation &&
+      mail &&
+      phone &&
+      address &&
+      password &&
       confirmPassword
-    );
+    ) {
+      return true;
+    } else {
+      setErrors("আপনাকে সবগুলো ফিল্ড পূরন করতে হবে।");
+      return false;
+    }
+  };
+
+  // password validation
+  const passwordValidation = () => {
+    if (password.length < 6) {
+      setErrors("পাসওয়ার্ড এর দৈর্ঘ্য ৬ বা তার বেশি হতে হবে।");
+      return false;
+    }
+    if (password !== confirmPassword) {
+      setErrors("দুইটা পাসওয়ার্ডই একই হতে হবে।");
+      return false;
+    }
+    return true;
   };
 
   return (
@@ -164,6 +202,7 @@ function ApplyForm(props) {
             )}
           </div>
         </div>
+        <small style={{ color: "red", marginTop: "25px" }}>{errors}</small>
         <div className="button-group" style={{ marginTop: "20px" }}>
           <button
             type="button"
@@ -172,8 +211,12 @@ function ApplyForm(props) {
           >
             পূর্ববর্তি
           </button>
-          <button type="button" className="next" onClick={() => apply()}>
-            সাবমিট
+          <button
+            type="button"
+            className={loading ? "inactive" : "next"}
+            onClick={loading ? null : () => apply()}
+          >
+            {loading ? "...প্রসেসিং" : "সাবমিট"}
           </button>
         </div>
       </form>
