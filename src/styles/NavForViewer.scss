@@ -30,6 +30,16 @@
   a.active {
     color: var(--primary-color);
   }
+
+  a.donate {
+    color: white;
+    background: var(--primary-color-dark);
+    padding: 10px 30px;
+    border-radius: 8px;
+  }
+  a.hide {
+    display: none;
+  }
 }
 
 .navforviwer.white-active {

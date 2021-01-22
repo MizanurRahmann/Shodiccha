@@ -33,7 +33,9 @@ function NavForViewer(props) {
         </div>
       </div>
 
-      <div>Donate</div>
+      <NavLink className={whiteBackground ? "donate" : "hide"} to="/donate">
+        দান করুন
+      </NavLink>
     </div>
   );
 }
