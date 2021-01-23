@@ -32,7 +32,7 @@ function ApplyForm(props) {
     ) {
       return true;
     } else {
-      setErrors("আপনাকে সবগুলো ফিল্ড পূরন করতে হবে।");
+      setErrors("All fields required");
       return false;
     }
   };
@@ -130,8 +130,6 @@ function ApplyForm(props) {
           setErrors(err.message);
           setLoading(false);
         });
-    } else {
-      setErrors("");
     }
   };
 
@@ -271,7 +269,7 @@ function ApplyForm(props) {
             )}
           </div>
         </div>
-        <small style={{ color: "red", marginTop: "25px" }}>{errors}</small>
+        <small style={{ color: "red", marginTop: "-25px" }}>{errors}</small>
         <div className="button-group" style={{ marginTop: "20px" }}>
           <button
             type="button"

@@ -12,6 +12,8 @@
 
   form {
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
     input,
     textarea {
       width: calc(100% - 20px);
@@ -107,6 +109,7 @@
       border-radius: 10px;
       font-family: SHOBUJ;
       font-size: 20px;
+      outline: none;
       cursor: pointer;
 
       &:hover {

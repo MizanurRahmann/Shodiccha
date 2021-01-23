@@ -1,24 +1,51 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import login from "../assets/images/login.svg";
+import { auth } from "../firebase/util";
+import { useHistory } from "react-router-dom";
 
 // Styles
 import "../styles/Enter.scss";
 import "../styles/Form.scss";
-
+// Assets
+import login from "../assets/images/login.svg";
 // Components
 import NavForViewer from "../components/Navbar/NavForViewer";
 import FormPageStyle from "../components/Auth/FormPageStyle";
 
 function Enter() {
+  const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const LoginLogic = (event) => {
-    event.preventDefault();
-    console.log(`${email} ${password} `);
-    setEmail("");
-    setPassword("");
+  // FORM VALIDATION
+  const checkForm = () => {
+    if (email && password) {
+      return true;
+    } else {
+      setError("All fields required.");
+      return false;
+    }
+  };
+
+  // ENTER FUNCTIONality
+  const enter = () => {
+    if (checkForm()) {
+      setLoading(true);
+      auth
+        .signInWithEmailAndPassword(email, password)
+        .then(() => {
+          setLoading(false);
+          setEmail("");
+          setPassword("");
+          history.push("/");
+        })
+        .catch((error) => {
+          setLoading(false);
+          setError(error.message);
+        });
+    }
   };
 
   return (
@@ -48,8 +75,13 @@ function Enter() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button type="button" onClick={LoginLogic}>
-              প্রবেশ
+            <small style={{ color: "red", marginTop: "25px" }}>{error}</small>
+            <button
+              type="button"
+              className={loading ? "inactive" : "next"}
+              onClick={loading ? null : () => enter()}
+            >
+              {loading ? "...প্রসেসিং" : "সাবমিট"}
             </button>
           </form>
         </div>
