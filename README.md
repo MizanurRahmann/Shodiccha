@@ -1,70 +1,14 @@
-# Getting Started with Create React App
+## স্বদিচ্ছা ফাউন্ডেশান
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+স্বদিচ্ছা ফাউন্ডেশান একটি অলাভজনক, অরাজনৈতীক স্বচ্ছাসেবি সংগঠন। মানবতা, বন্ধন, সহযোগিতা এই তিনটি মূল নীতি নিয়ে, এ সংগঠনের যাত্রা শুরু।
+সংগঠনটি বরাবরই বিভিন্ন সেবামূলক কাজের মাধ্যমে বিভিন্ন দুস্থ্য মানুষদের পাশে এসে দাঁড়ায়। পাশাপাশি বিভিন্ন দূর্যোগের সময়, ক্ষতিগ্রস্থ্য এলাকার পরিবেশের উন্নয়নের জন্য বিভিন্ন গঠনমূলক কাজে অংশগ্রহন করে থাকে। সংগঠনটির রয়েছে প্রায় ৫০ জনের মতো স্বেচ্ছাসেবক, যারা নিরলস ভাবে কোনো রকম উপকারের আশা ব্যাতিরেকে শুধুমাত্র মানবতার জন্য নিজেদের অর্থ ও শ্রম দিয়ে যাচ্ছে। এছাড়াও রয়েছে ২০ জনের মতো নিয়মিত ডোনার, যারা বিভিন্ন ইভেন্টে শ্রম দিতে না পারলেউ তাদের অর্থ সাহায্য সঠিক সময়ে পৌছে দিয়ে থাকেন।
+<br/>
 
-## Available Scripts
+## অর্থ সাহায্যের উৎস
 
-In the project directory, you can run:
+প্রতিমাসের একটি নির্দিষ্ট সময়ের মধে সংগঠনের নিয়মিত ডোনাররা কিছু টাকা সংগঠনের তহবিলে দান করে থাকেন, যা পরবর্তী ইভেন্টগুলোর জন্য জমা করে রাখা হয়। কোনো ইভেন্ট শুরু হলে, ইভেন্টের জন্য ব্যবহৃত অর্থের একটি হিসাব করে তার পরিমান সংগঠনের ডোনার ও স্বচ্ছাসেবকদের জানিয়ে দেয়া হয়। তহবিলে থাকা অর্থ দিয়ে যদি ইভেন্টের খরচ সম্পন্ন করা যায় তবে আলাদা করে টাকা সংগ্রহ করা হয়না। তহবিলের টাকা দিয়েই ইভেন্টটি সম্পন্ন হয়। কিন্ত খরচের হিসাবের পরিমান তহবিলে থাকা টাকার চেয়ে অধিক হলে, স্বেচ্ছাসেবক আর ডোনারদের থেকে টাকা সংগ্রহ করে ইভেন্টটি যতোদ্রুত সম্ভব সম্পন্ন করা হয়।
+<br/><br/>
 
-### `npm start`
+## প্রজেক্ট
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+স্বদিচ্ছা ফাউন্ডেশানের জন্য বানানো এ প্রজেকটটি ব্যক্তিগত শিক্ষা বা স্কিল ডেভেলপমেন্টের জন্য। এ ওয়েবসাইটটির সাথে সংগঠনটির কোনো সম্পর্ক বা যোগসূত্র নেই।
