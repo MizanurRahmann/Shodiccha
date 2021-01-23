@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import Slider from "react-slick";
 import ActivityCard from "../Cards/ActivityCard";
 import "../../styles/RecentActivity.scss";
 
 function RecentActivity() {
+  const customSlider = useRef();
+
   const settings = {
     arrows: false,
     infinite: true,
@@ -23,7 +25,10 @@ function RecentActivity() {
         </p>
 
         <div style={{ display: "flex", marginTop: "25px" }}>
-          <div className="round_btn">
+          <div
+            className="round_btn"
+            onClick={() => customSlider.current.slickPrev()}
+          >
             <svg
               width="24"
               height="24"
@@ -34,7 +39,10 @@ function RecentActivity() {
               <path d="M2.117 12l7.527 6.235-.644.765-9-7.521 9-7.479.645.764-7.529 6.236h21.884v1h-21.883z" />
             </svg>
           </div>
-          <div className="round_btn">
+          <div
+            className="round_btn"
+            onClick={() => customSlider.current.slickNext()}
+          >
             <svg
               width="24"
               height="24"
@@ -48,7 +56,11 @@ function RecentActivity() {
         </div>
       </div>
       <div className="slider-block">
-        <Slider {...settings} className="slider recent">
+        <Slider
+          ref={(slider) => (customSlider.current = slider)}
+          {...settings}
+          className="slider recent"
+        >
           <ActivityCard value={1} />
           <ActivityCard value={2} />
           <ActivityCard value={3} />
