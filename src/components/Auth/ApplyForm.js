@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { auth, fdb } from "../../firebase/util";
+import md5 from "md5";
 
 // STYLES
 import "../../styles/Form.scss";
@@ -7,7 +9,7 @@ import "../../styles/Form.scss";
 function ApplyForm(props) {
   const [showPassword1, SetShowPassword1] = useState(false);
   const [showPassword2, SetShowPassword2] = useState(false);
-  const [name, setName] = useState(null);
+  const [name, setName] = useState("");
   const [occupation, setOccupation] = useState("");
   const [mail, setMail] = useState("");
   const [phone, setPhone] = useState("");
@@ -17,23 +19,7 @@ function ApplyForm(props) {
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState("");
 
-  // Apply function logic
-  const apply = () => {
-    if (requiredFildsValidation() && passwordValidation()) {
-      setLoading(true);
-      setTimeout(() => {
-        // Apply logic --->
-        console.log("All Ok");
-
-        setErrors("");
-        setLoading(false);
-      }, 2000);
-    } else {
-      console.log("Failed");
-    }
-  };
-
-  // field requirements validation
+  // FIELDS REQUIREMENTS VALIDATION
   const requiredFildsValidation = () => {
     if (
       name &&
@@ -51,17 +37,102 @@ function ApplyForm(props) {
     }
   };
 
-  // password validation
+  // PASSWORD VALIDATION
   const passwordValidation = () => {
     if (password.length < 6) {
-      setErrors("পাসওয়ার্ড এর দৈর্ঘ্য ৬ বা তার বেশি হতে হবে।");
+      setErrors("Password length must be greater than 6 characters.");
       return false;
     }
     if (password !== confirmPassword) {
-      setErrors("দুইটা পাসওয়ার্ডই একই হতে হবে।");
+      setErrors("Passwords should be matched.");
       return false;
     }
     return true;
+  };
+
+  // PHONE-NUMBER VALIDATION
+  const phoneNumberValidation = () => {
+    if (phone.length === 11 && phone[0] === "0" && phone[1] === "1") {
+      return true;
+    }
+    setErrors("Your Phone number is not valid.");
+    return false;
+  };
+
+  // VALIDATION CHECK
+  const validationCheck = () => {
+    if (
+      requiredFildsValidation() &&
+      passwordValidation &&
+      phoneNumberValidation
+    ) {
+      return true;
+    }
+    return false;
+  };
+
+  //SAVE USER TO DATABASE
+  const saveUsersToDataBase = (createdUser) => {
+    fdb
+      .collection("Users")
+      .doc(createdUser.user.uid)
+      .set({
+        name: createdUser.user.displayName,
+        avatar: createdUser.user.photoURL,
+        gender: "",
+        joined: new Date().toISOString().slice(0, 10),
+        donated: 0,
+        participation: 0,
+        phone,
+        address,
+        occupation,
+      });
+  };
+
+  // CLEAR ALL FIELDS
+  const clearFields = () => {
+    setName("");
+    setOccupation("");
+    setMail("");
+    setPhone("");
+    setAddress("");
+    SetPassword("");
+    SetConfirmPassword("");
+    setErrors("");
+  };
+
+  // APPLY FUNCTION LOGIC
+  const apply = () => {
+    if (validationCheck()) {
+      setLoading(true);
+
+      auth
+        .createUserWithEmailAndPassword(mail, password)
+        .then((res) => {
+          return res.user
+            .updateProfile({
+              displayName: name,
+              photoURL: `https://gravatar.com/avatar/${md5(
+                res.user.email
+              )}?d=identicon`,
+            })
+            .then(() => {
+              setLoading(false);
+              saveUsersToDataBase(res);
+              clearFields();
+            })
+            .catch((error) => {
+              setErrors(error.message);
+              setLoading(false);
+            });
+        })
+        .catch((err) => {
+          setErrors(err.message);
+          setLoading(false);
+        });
+    } else {
+      setErrors("");
+    }
   };
 
   return (
