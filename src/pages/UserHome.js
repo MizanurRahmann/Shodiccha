@@ -4,44 +4,14 @@ import { connect } from "react-redux";
 
 // Styles
 import "../styles/UserHome.scss";
-// Assets
-import welcome from "../assets/images/openWindow.svg";
-import flower from "../assets/images/flower-2.svg";
+// Components
+import Navbar from "../components/Navbar/Navbar";
 
 function UserHome(props) {
   return (
     <div className="userHome">
       {/* TOPNAV */}
-      <div className="topnav">
-        <div className="brand">
-          <Link to="/">স্বদিচ্ছা</Link>
-        </div>
-
-        <div className="userBox">
-          <div className="notification">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-bell"
-            >
-              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-              <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-            </svg>
-            <div className="dot"></div>
-          </div>
-
-          <div className="userPhoto">
-            <img src={props.currentUser.photoURL} alt="" />
-          </div>
-        </div>
-      </div>
+      <Navbar />
 
       {/* CONTENT BODY */}
       <div className="contentBody">

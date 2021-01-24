@@ -1,68 +1,7 @@
 .userHome {
+  margin-top: 10vh;
   background: #f7f7f7;
   padding: 10px;
-
-  .topnav {
-    background: #fff;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .brand {
-      width: 25%;
-      padding: 0 50px;
-      a {
-        text-decoration: none;
-        color: var(--text-color);
-        display: inline-block;
-        font-family: NILADRI;
-        font-size: 25px;
-      }
-    }
-
-    .userBox {
-      display: flex;
-      align-items: center;
-      padding: 0 50px;
-
-      .notification {
-        width: 30px;
-        height: 30px;
-        margin-right: 25px;
-        position: relative;
-        svg {
-          color: gray;
-        }
-        .dot {
-          width: 15px;
-          height: 15px;
-          border-radius: 50px;
-          background: var(--primary-color-dark);
-          position: absolute;
-          top: 1px;
-          right: 1px;
-          // display: none;
-        }
-      }
-      .userPhoto {
-        img {
-          width: 40px;
-          height: 40px;
-          border-radius: 8px;
-          padding: 2px;
-          border: 2px solid;
-          border-bottom-color: var(--primary-color-dark);
-          border-right-color: var(--primary-color-dark);
-          border-top-color: var(--primary-color);
-          border-left-color: var(--primary-color-light);
-        }
-      }
-    }
-  }
 
   .contentBody {
     display: flex;

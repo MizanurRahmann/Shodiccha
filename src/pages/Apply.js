@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 // Components
-import NavForViewer from "../components/Navbar/NavForViewer";
+import Navbar from "../components/Navbar/Navbar";
 import ApplyDescription from "../components/Auth/ApplyDescription";
 import ApplyForm from "../components/Auth/ApplyForm";
 import FormPageStyle from "../components/Auth/FormPageStyle";
@@ -17,7 +17,7 @@ function Apply() {
 
   return (
     <div className="apply">
-      <NavForViewer />
+      <Navbar />
 
       <div className="apply__content">
         <h1 className="primary__heading">সদস্যের আবেদন</h1>

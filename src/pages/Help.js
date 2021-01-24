@@ -4,7 +4,7 @@ import "../styles/Form.scss";
 import wallet from "../assets/images/wallet.svg";
 
 // Components
-import NavForViewer from "../components/Navbar/NavForViewer";
+import Navbar from "../components/Navbar/Navbar";
 import FormPageStyle from "../components/Auth/FormPageStyle";
 
 function Help() {
@@ -14,7 +14,7 @@ function Help() {
 
   return (
     <div className="help">
-      <NavForViewer />
+      <Navbar />
       <div className="help__content">
         {/* HEADING */}
         <h1 className="primary__heading">সাহায্যের জন্য আবেদন করুন</h1>

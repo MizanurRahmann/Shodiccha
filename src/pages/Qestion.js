@@ -6,7 +6,7 @@ import "../styles/Question.scss";
 import "../styles/Form.scss";
 
 // Components
-import NavForViewer from "../components/Navbar/NavForViewer";
+import Navbar from "../components/Navbar/Navbar";
 import FormPageStyle from "../components/Auth/FormPageStyle";
 
 function Qestion() {
@@ -21,7 +21,7 @@ function Qestion() {
 
   return (
     <div className="question">
-      <NavForViewer />
+      <Navbar />
 
       {/* HEADING */}
       <h1 className="primary__heading">মন্তব্য করুন</h1>

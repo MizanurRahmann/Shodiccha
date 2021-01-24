@@ -9,7 +9,7 @@ import "../styles/Form.scss";
 // Assets
 import login from "../assets/images/login.svg";
 // Components
-import NavForViewer from "../components/Navbar/NavForViewer";
+import Navbar from "../components/Navbar/Navbar";
 import FormPageStyle from "../components/Auth/FormPageStyle";
 
 function Enter() {
@@ -50,7 +50,7 @@ function Enter() {
 
   return (
     <div className="enter">
-      <NavForViewer />
+      <Navbar />
       <div className="enter__content">
         {/* HEADING */}
         <h1 className="primary__heading">প্রবেশ করুন</h1>
