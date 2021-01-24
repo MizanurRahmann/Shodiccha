@@ -13,6 +13,7 @@ import Help from "./pages/Help";
 import Footer from "./components/Footer";
 import NoFound from "./pages/NoFound";
 import UserHome from "./pages/UserHome";
+import FullPageLoading from "./components/Loading/FullPageLoading";
 
 function App({ setUser, clearUser, loading, isLogedIn }) {
   useEffect(() => {
@@ -30,7 +31,15 @@ function App({ setUser, clearUser, loading, isLogedIn }) {
       <Router>
         <Switch>
           <Route exact path="/">
-            {!loading ? isLogedIn ? <UserHome /> : <Home /> : "Loading"}
+            {!loading ? (
+              isLogedIn ? (
+                <UserHome />
+              ) : (
+                <Home />
+              )
+            ) : (
+              <FullPageLoading />
+            )}
           </Route>
           <Route exact path="/apply" component={Apply} />
           <Route exact path="/enter" component={Enter} />
@@ -38,7 +47,6 @@ function App({ setUser, clearUser, loading, isLogedIn }) {
           <Route exact path="/help" component={Help} />
           <Route component={NoFound} />
         </Switch>
-        ;
         <Footer />
       </Router>
     </div>
