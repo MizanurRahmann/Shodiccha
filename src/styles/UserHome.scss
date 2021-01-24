@@ -1,5 +1,119 @@
 .userHome {
-  padding: 100px;
-  min-height: 100vh;
-  font-size: 5rem;
+  background: #f7f7f7;
+  padding: 10px;
+
+  .topnav {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+      width: 25%;
+      padding: 0 50px;
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+        display: inline-block;
+        font-family: NILADRI;
+        font-size: 25px;
+      }
+    }
+
+    .userBox {
+      display: flex;
+      align-items: center;
+      padding: 0 50px;
+
+      .notification {
+        width: 30px;
+        height: 30px;
+        margin-right: 25px;
+        position: relative;
+        svg {
+          color: gray;
+        }
+        .dot {
+          width: 15px;
+          height: 15px;
+          border-radius: 50px;
+          background: var(--primary-color-dark);
+          position: absolute;
+          top: 1px;
+          right: 1px;
+          // display: none;
+        }
+      }
+      .userPhoto {
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 8px;
+          padding: 2px;
+          border: 2px solid;
+          border-bottom-color: var(--primary-color-dark);
+          border-right-color: var(--primary-color-dark);
+          border-top-color: var(--primary-color);
+          border-left-color: var(--primary-color-light);
+        }
+      }
+    }
+  }
+
+  .contentBody {
+    display: flex;
+
+    &__sidenav {
+      width: 20%;
+      background: #fff;
+      min-height: calc(100vh - 60px);
+      border-radius: 8px;
+      margin-right: 10px;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .heading {
+        position: relative;
+        h1 {
+          font-family: RONGDHONU;
+          font-weight: normal;
+          color: var(--text-color);
+          margin-bottom: 30px;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 20px;
+        font-family: SHOBUJ;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        svg {
+          width: 20px;
+          height: 20px;
+          color: var(--primary-color-dark);
+          margin-right: 20px;
+        }
+      }
+      a.active {
+        font-weight: bold;
+        color: var(--primary-color-dark);
+      }
+    }
+
+    &__content {
+      width: 80%;
+      background: #fff;
+      border-radius: 8px;
+    }
+  }
 }
