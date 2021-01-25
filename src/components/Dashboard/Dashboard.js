@@ -3,6 +3,7 @@ import React from "react";
 // SCSS
 import "../../styles/Dashboard.scss";
 import Activity from "./Activity";
+import Chart from "./Chart";
 
 function Dashboard() {
   return (
@@ -33,7 +34,9 @@ function Dashboard() {
         </div>
       </div>
 
-      <div className="dashboard__eventInfo">Ok</div>
+      <div className="dashboard__eventInfo">
+        <Chart />
+      </div>
     </div>
   );
 }

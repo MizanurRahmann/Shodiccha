@@ -3,7 +3,7 @@
   flex-wrap: wrap;
 
   &__activity {
-    width: 60%;
+    width: 65%;
     height: 45vh;
 
     .activity-overview {
@@ -51,10 +51,10 @@
   }
 
   &__eventInfo {
-    width: calc(40% - 10px);
-    min-height: 50vh;
+    width: calc(35% - 10px);
+    height: auto;
     margin-left: 10px;
-    padding: 40px;
+    padding: 20px 40px;
     border-radius: 8px;
     background: #fff;
   }
