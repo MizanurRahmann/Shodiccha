@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { setUser, clearUser } from "./redux/user/userAction";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-// Pages or Components
+// Pages
 import Home from "./pages/Home";
 import Apply from "./pages/Apply";
 import Enter from "./pages/Enter";
@@ -14,6 +14,9 @@ import Footer from "./components/Footer";
 import NoFound from "./pages/NoFound";
 import UserHome from "./pages/UserHome";
 import FullPageLoading from "./components/Loading/FullPageLoading";
+
+// Components
+import Dashboard from "./components/Dashboard/Dashboard";
 
 function App({ setUser, clearUser, loading, isLogedIn }) {
   useEffect(() => {
@@ -33,7 +36,9 @@ function App({ setUser, clearUser, loading, isLogedIn }) {
           <Route exact path="/">
             {!loading ? (
               isLogedIn ? (
-                <UserHome />
+                <UserHome>
+                  <Dashboard />
+                </UserHome>
               ) : (
                 <Home />
               )

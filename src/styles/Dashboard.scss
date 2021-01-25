@@ -1,0 +1,61 @@
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__activity {
+    width: 60%;
+    height: 45vh;
+
+    .activity-overview {
+      display: flex;
+      justify-content: space-between;
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      padding: 10px;
+
+      .activity {
+        width: 40%;
+        height: 10vh;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        .logo {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .text {
+          color: var(--text-color);
+          font-family: SHOBUJ;
+          h1 {
+            font-size: 20px;
+            line-height: 20px;
+          }
+          p {
+            font-size: 15px;
+            line-height: 15px;
+            color: gray;
+          }
+        }
+      }
+      .activity:nth-child(even) {
+        border-right: 2px solid #f7f7f7;
+        border-left: 2px solid #f7f7f7;
+      }
+    }
+  }
+
+  &__eventInfo {
+    width: calc(40% - 10px);
+    min-height: 50vh;
+    margin-left: 10px;
+    padding: 40px;
+    border-radius: 8px;
+    background: #fff;
+  }
+}
