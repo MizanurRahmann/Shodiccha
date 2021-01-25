@@ -1,6 +1,8 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
+import { auth } from "../firebase/util";
+import { clearUser } from "../redux/user/userAction";
 
 // Styles
 import "../styles/UserHome.scss";
@@ -8,6 +10,13 @@ import "../styles/UserHome.scss";
 import Navbar from "../components/Navbar/Navbar";
 
 function UserHome(props) {
+  // LOGOUT FUNCTIONALITY
+  const logout = () => {
+    auth.signOut().then(() => {
+      props.clearUser();
+    });
+  };
+
   return (
     <div className="userHome">
       {/* TOPNAV */}
@@ -152,7 +161,7 @@ function UserHome(props) {
               </svg>
               সেটিংস
             </NavLink>
-            <Link>
+            <Link to="/" onClick={logout}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -184,5 +193,12 @@ const mapStateToProps = (state) => {
     currentUser: state.user.currentUser,
   };
 };
+const mapDispatchToProps = (dispatch) => {
+  return {
+    clearUser: () => {
+      dispatch(clearUser());
+    },
+  };
+};
 
-export default connect(mapStateToProps)(UserHome);
+export default connect(mapStateToProps, mapDispatchToProps)(UserHome);

@@ -41,6 +41,8 @@ function Dashboard() {
 
       <div className="dashboard__eventInfo">
         <ChartPolar />
+
+        <div className="others"></div>
       </div>
     </div>
   );

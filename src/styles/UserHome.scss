@@ -28,6 +28,12 @@
         border-radius: 5px;
         display: flex;
         align-items: center;
+        transition: 0.4s;
+
+        &:hover {
+          color: var(--primary-color);
+        }
+
         svg {
           width: 20px;
           height: 20px;

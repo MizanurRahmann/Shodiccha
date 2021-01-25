@@ -20,7 +20,7 @@ function Chart() {
   };
 
   return (
-    <div style={{ fontFamily: "SHOBUJ" }}>
+    <div className="chartPolar">
       <h1 style={{ color: "var(--text-color)", fontSize: "25px" }}>অবদান</h1>
       <h2
         style={{

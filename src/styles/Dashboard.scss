@@ -52,16 +52,31 @@
 
   &__donation {
     background: #fff;
+    height: fit-content;
     border-radius: 8px;
     padding: 20px;
   }
 
   &__eventInfo {
     width: calc(35% - 10px);
-    height: auto;
     margin-left: 10px;
-    padding: 20px 40px;
-    border-radius: 8px;
-    background: #fff;
+
+    .chartPolar {
+      width: 100%;
+      height: fit-content;
+      margin-bottom: 10px;
+      padding: 20px 40px;
+      border-radius: 8px;
+      background: #fff;
+      font-family: SHOBUJ;
+    }
+    .others {
+      width: 100%;
+      height: calc(100% + 10px);
+      padding: 20px 40px;
+      border-radius: 8px;
+      background: #fff;
+      border-radius: 8px;
+    }
   }
 }
