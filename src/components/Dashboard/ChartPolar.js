@@ -1,5 +1,5 @@
 import React from "react";
-import { Doughnut, Polar } from "react-chartjs-2";
+import { Polar } from "react-chartjs-2";
 
 function Chart() {
   const data = {
@@ -21,7 +21,7 @@ function Chart() {
 
   return (
     <div style={{ fontFamily: "SHOBUJ" }}>
-      <h1 style={{ color: "var(--text-color)" }}>অবদান</h1>
+      <h1 style={{ color: "var(--text-color)", fontSize: "25px" }}>অবদান</h1>
       <h2
         style={{
           color: "gray",

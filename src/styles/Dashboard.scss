@@ -50,6 +50,12 @@
     }
   }
 
+  &__donation {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+  }
+
   &__eventInfo {
     width: calc(35% - 10px);
     height: auto;

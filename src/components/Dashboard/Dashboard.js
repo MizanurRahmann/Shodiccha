@@ -3,7 +3,8 @@ import React from "react";
 // SCSS
 import "../../styles/Dashboard.scss";
 import Activity from "./Activity";
-import Chart from "./Chart";
+import ChartLine from "./ChartLine";
+import ChartPolar from "./ChartPolar";
 
 function Dashboard() {
   return (
@@ -32,10 +33,14 @@ function Dashboard() {
             image="3"
           />
         </div>
+
+        <div className="dashboard__donation">
+          <ChartLine />
+        </div>
       </div>
 
       <div className="dashboard__eventInfo">
-        <Chart />
+        <ChartPolar />
       </div>
     </div>
   );
