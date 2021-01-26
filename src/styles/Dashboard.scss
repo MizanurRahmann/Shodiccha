@@ -52,13 +52,15 @@
 
   &__donation {
     background: #fff;
-    height: fit-content;
+    min-height: calc(80vh - 50px);
     border-radius: 8px;
     padding: 20px;
+    border: 1px solid red;
   }
 
   &__eventInfo {
     width: calc(35% - 10px);
+    height: calc(90vh - 20px);
     margin-left: 10px;
 
     .chartPolar {
@@ -70,13 +72,75 @@
       background: #fff;
       font-family: SHOBUJ;
     }
-    .others {
+    .topDonour {
       width: 100%;
-      height: calc(100% + 10px);
-      padding: 20px 40px;
+      height: calc(50vh - 25px);
+      padding: 20px;
       border-radius: 8px;
       background: #fff;
       border-radius: 8px;
+      font-family: SHOBUJ;
+
+      .members {
+        margin-top: 25px;
+
+        .heading {
+          font-size: 15px;
+          padding-bottom: 5px;
+          margin-bottom: 10px;
+          border-bottom: 1px solid #ccc;
+          color: #ccc;
+          display: flex;
+          align-items: center;
+          .name {
+            width: 60%;
+          }
+          .donation {
+            width: 25%;
+          }
+          .participation {
+            width: 15%;
+          }
+        }
+
+        .member {
+          display: flex;
+          align-items: center;
+          padding: 10px 0;
+          color: var(--text-color);
+          font-family: SHOBUJ;
+
+          .name {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+              margin-right: 20px;
+            }
+            h2 {
+              font-size: 15px;
+              font-weight: normal;
+              color: gray;
+            }
+          }
+
+          .donation {
+            width: 25%;
+            font-size: 18px;
+            font-weight: bold;
+          }
+
+          .participation {
+            width: 15%;
+            font-size: 18px;
+            font-weight: bold;
+            color: gray;
+          }
+        }
+      }
     }
   }
 }

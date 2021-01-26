@@ -2,9 +2,11 @@ import React from "react";
 
 // SCSS
 import "../../styles/Dashboard.scss";
+//Components
 import Activity from "./Activity";
 import ChartLine from "./ChartLine";
 import ChartPolar from "./ChartPolar";
+import TopMembers from "./TopMembers";
 
 function Dashboard() {
   return (
@@ -41,8 +43,7 @@ function Dashboard() {
 
       <div className="dashboard__eventInfo">
         <ChartPolar />
-
-        <div className="others"></div>
+        <TopMembers />
       </div>
     </div>
   );
