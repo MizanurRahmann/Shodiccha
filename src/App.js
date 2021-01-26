@@ -17,6 +17,7 @@ import FullPageLoading from "./components/Loading/FullPageLoading";
 
 // Components
 import Dashboard from "./components/Dashboard/Dashboard";
+import Profile from "./components/Profile/Profile";
 
 function App({ setUser, clearUser, loading, isLogedIn }) {
   useEffect(() => {
@@ -33,6 +34,7 @@ function App({ setUser, clearUser, loading, isLogedIn }) {
     <div className="App">
       <Router>
         <Switch>
+          {/* Home page */}
           <Route exact path="/">
             {!loading ? (
               isLogedIn ? (
@@ -41,6 +43,21 @@ function App({ setUser, clearUser, loading, isLogedIn }) {
                 </UserHome>
               ) : (
                 <Home />
+              )
+            ) : (
+              <FullPageLoading />
+            )}
+          </Route>
+
+          {/* Profile Page */}
+          <Route exact path="/profile">
+            {!loading ? (
+              isLogedIn ? (
+                <UserHome>
+                  <Profile />
+                </UserHome>
+              ) : (
+                <Enter />
               )
             ) : (
               <FullPageLoading />
