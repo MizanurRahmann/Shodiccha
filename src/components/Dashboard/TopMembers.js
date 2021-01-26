@@ -12,8 +12,7 @@ function TopMembers() {
         শীর্ষ সদস্যবৃন্দ
       </h1>
       <h2 style={{ fontSize: "16px", color: "gray", fontWeight: "normal" }}>
-        ডোনেশন ও বিভিন্ন ইভেন্টে অংশগ্রহনের ভিত্তিতে আমাদের সম্মানিত ৩
-        সদস্যবৃন্দ
+        ডোনেশন ও বিভিন্ন ইভেন্টে অংশগ্রহনের ভিত্তিতে আমাদের সম্মানিত তিনজন সদস্য
       </h2>
       <div className="members">
         <div className="heading">
@@ -47,7 +46,7 @@ function TopMembers() {
         <div className="member">
           <div className="name">
             <img src={member3} alt="" style={{ background: "#E7F2FA" }} />
-            <h2>আহম্মেদ আব্দুল বারিক</h2>
+            <h2>নাছরিন আফরিন</h2>
           </div>
           <div className="donation" style={{ color: "#8BBDE8" }}>
             9500

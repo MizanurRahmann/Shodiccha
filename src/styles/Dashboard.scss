@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
+  // MIDDLE PART (ACTIVITY)
   &__activity {
     width: 65%;
     height: 45vh;
@@ -50,14 +51,33 @@
     }
   }
 
+  // MIDDLE PART (CHART - LINE)
   &__donation {
     background: #fff;
     min-height: calc(80vh - 50px);
     border-radius: 8px;
     padding: 20px;
-    border: 1px solid red;
+
+    .donours {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      .donour {
+        margin-left: 40px;
+        display: flex;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #ccc;
+          border: 2px solid #fff;
+          margin-left: -10px;
+        }
+      }
+    }
   }
 
+  // RIGHT PART
   &__eventInfo {
     width: calc(35% - 10px);
     height: calc(90vh - 20px);
