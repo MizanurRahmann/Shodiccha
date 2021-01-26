@@ -7,6 +7,7 @@ import { setUser, clearUser } from "../../redux/user/userAction";
 import "../../styles/Profile.scss";
 //ASSETS
 import member1 from "../../assets/images/member-1.png";
+import ChartBar from "./ChartBar";
 
 function Profile({ userProfile, currentUser }) {
   useEffect(() => {}, []);
@@ -18,7 +19,8 @@ function Profile({ userProfile, currentUser }) {
           <img src={currentUser.photoURL} alt="" className="profile-picture" />
           <div className="name">
             <h2>স্বেচ্ছাসেবক</h2>
-            <h1>{currentUser.displayName}</h1>
+            {/* <h1>{currentUser.displayName}</h1> */}
+            <h1>মোঃ মিজানুর রহমান</h1>
             <button>Edit Profile</button>
           </div>
         </div>
@@ -48,6 +50,12 @@ function Profile({ userProfile, currentUser }) {
             <p>12 JAN 2020</p>
           </div>
         </div>
+      </div>
+
+      <div className="profile__overview">Overview</div>
+
+      <div className="profile__info">
+        <ChartBar />
       </div>
     </div>
   );
