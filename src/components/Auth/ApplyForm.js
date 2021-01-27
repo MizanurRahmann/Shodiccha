@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { auth, fdb } from "../../firebase/util";
+import { useHistory } from "react-router-dom";
 import md5 from "md5";
 
 // STYLES
 import "../../styles/Form.scss";
 
 function ApplyForm(props) {
+  const history = useHistory();
   const [showPassword1, SetShowPassword1] = useState(false);
   const [showPassword2, SetShowPassword2] = useState(false);
   const [name, setName] = useState("");
@@ -55,7 +57,7 @@ function ApplyForm(props) {
     if (phone.length === 11 && phone[0] === "0" && phone[1] === "1") {
       return true;
     }
-    setErrors("Your Phone number is not valid.");
+    setErrors("Your Phone number is not valid. Try again with 01");
     return false;
   };
 
@@ -63,8 +65,8 @@ function ApplyForm(props) {
   const validationCheck = () => {
     if (
       requiredFildsValidation() &&
-      passwordValidation &&
-      phoneNumberValidation
+      passwordValidation() &&
+      phoneNumberValidation()
     ) {
       return true;
     }
@@ -105,26 +107,21 @@ function ApplyForm(props) {
   const apply = () => {
     if (validationCheck()) {
       setLoading(true);
+      setErrors("");
 
       auth
         .createUserWithEmailAndPassword(mail, password)
         .then((res) => {
-          return res.user
-            .updateProfile({
+          return res.user.updateProfile({
               displayName: name,
-              photoURL: `https://gravatar.com/avatar/${md5(
-                res.user.email
-              )}?d=identicon`,
-            })
-            .then(() => {
-              setLoading(false);
-              saveUsersToDataBase(res);
-              clearFields();
-            })
-            .catch((error) => {
-              setErrors(error.message);
-              setLoading(false);
-            });
+              photoURL: `https://gravatar.com/avatar/${md5(res.user.email)}?d=identicon`,
+          })
+          .then(() => {
+            setLoading(false);
+            saveUsersToDataBase(res);
+            clearFields();
+            history.push("/");
+          })
         })
         .catch((err) => {
           setErrors(err.message);
@@ -269,7 +266,7 @@ function ApplyForm(props) {
             )}
           </div>
         </div>
-        <small style={{ color: "red", marginTop: "-25px" }}>{errors}</small>
+        <small style={{ color: "red", marginTop: "15px" }}>{errors}</small>
         <div className="button-group" style={{ marginTop: "20px" }}>
           <button
             type="button"
@@ -281,7 +278,7 @@ function ApplyForm(props) {
           <button
             type="button"
             className={loading ? "inactive" : "next"}
-            onClick={loading ? null : () => apply()}
+            onClick={loading ? null : apply}
           >
             {loading ? "...প্রসেসিং" : "সাবমিট"}
           </button>

@@ -19,7 +19,7 @@ import FullPageLoading from "./components/Loading/FullPageLoading";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Profile from "./components/Profile/Profile";
 
-function App({ setUser, clearUser, loading, isLogedIn }) {
+function App({ setUser, clearUser, loading, isLogedIn, currentUser }) {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -79,6 +79,7 @@ const mapStateToProps = (state) => {
   return {
     isLogedIn: state.user.isLogedIn,
     loading: state.user.loading,
+    currentUser: state.user.currentUser,
   };
 };
 

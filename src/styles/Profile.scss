@@ -220,4 +220,14 @@
       color: #fff;
     }
   }
+  a{
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: .3s;
+    &:hover{
+      color: var(--primary-color-dark);
+    }
+  }
 }

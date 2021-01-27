@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { auth } from "../../firebase/util";
 import { connect } from "react-redux";
 import { setUser } from "../../redux/user/userAction";
+import { useHistory } from "react-router-dom";
 
 // Assets
 import handshake from "../../assets/images/handshake.svg";
 import celebrate from "../../assets/images/celebrate.svg";
 
 function EmailVarification({ setUser }) {
+  const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");
@@ -19,7 +21,7 @@ function EmailVarification({ setUser }) {
       .sendEmailVerification()
       .then(() => {
         setSent(true);
-        setUser(auth.currentUser);
+        setUser(auth.currentUser.user)
         setLoading(false);
       })
       .catch(() => {
@@ -55,9 +57,14 @@ function EmailVarification({ setUser }) {
           <h2>আপনার মেইলে সত্যাখান লিংক পাঠানো হয়েছে</h2>
           <small style={{ color: "red" }}>{error}</small>
           {!loading ? (
-            <button className="sent" onClick={sendVarificationLink}>
+            <div>
+              <button className="sent" onClick={sendVarificationLink}>
               পুনরায় লিংক পাঠান
             </button>
+            <a href="/profile" className="sent">
+              প্রোফাইলে ফিরে যান
+            </a>
+            </div>
           ) : (
             <button className="processing">ইমেইল পাঠানো হচ্ছে...</button>
           )}
