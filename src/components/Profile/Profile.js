@@ -1,54 +1,78 @@
 import React, { useEffect } from "react";
-import { auth } from "../../firebase/util";
+import { fdb } from "../../firebase/util";
 import { connect } from "react-redux";
-import { setUser, clearUser } from "../../redux/user/userAction";
+import {
+  setUserProfile,
+  clearUser,
+  setLoading,
+  clearLoading,
+} from "../../redux/user/userAction";
 
 // SCSS
 import "../../styles/Profile.scss";
 //ASSETS
-import member1 from "../../assets/images/member-1.png";
 import ChartBar from "./ChartBar";
 import Overview from "./Overview";
 
-function Profile({ userProfile, currentUser }) {
-  useEffect(() => {}, []);
+function Profile(props) {
+  useEffect(() => {
+    if (props.userProfile === null) {
+      fdb
+        .collection("Users")
+        .doc(props.currentUser.uid)
+        .get()
+        .then((doc) => {
+          props.setUserProfile(doc.data());
+        })
+        .catch((err) => {
+          console.log(err.message());
+        });
+    }
+  }, []);
 
   return (
     <div className="profile">
       <div className="profile__basic">
         <div style={{ display: "flex", alignItems: "center" }}>
-          <img src={currentUser.photoURL} alt="" className="profile-picture" />
+          <img
+            src={props.currentUser.photoURL}
+            alt=""
+            className="profile-picture"
+          />
           <div className="name">
             <h2>স্বেচ্ছাসেবক</h2>
-            {/* <h1>{currentUser.displayName}</h1> */}
-            <h1>মোঃ মিজানুর রহমান</h1>
+            <h1>{props.currentUser.displayName}</h1>
             <button>Edit Profile</button>
           </div>
         </div>
         <div className="details">
           <div className="detail">
-            <h3>Email:</h3>
-            <p>mr926560@gmail.com</p>
+            <h3>ইমেইলঃ</h3>
+            <p>{props.currentUser.email}</p>
           </div>
           <div className="detail">
-            <h3>Phone:</h3>
-            <p>+880 1531709712</p>
+            <h3>ফোনঃ</h3>
+            <p>{props.userProfile && props.userProfile.phone}</p>
           </div>
           <div className="detail">
-            <h3>Occupation:</h3>
-            <p>Student</p>
+            <h3>পেশাঃ</h3>
+            <p>{props.userProfile && props.userProfile.occupation}</p>
           </div>
           <div className="detail">
-            <h3>Gender:</h3>
-            <p>Male</p>
+            <h3>লিঙগঃ</h3>
+            <p>
+              {props.userProfile && props.userProfile.gender
+                ? props.userProfile.gender
+                : "N/A"}
+            </p>
           </div>
           <div className="detail">
-            <h3>Address:</h3>
-            <p>Khandar, Bogra</p>
+            <h3>ঠিকানাঃ</h3>
+            <p>{props.userProfile && props.userProfile.address}</p>
           </div>
           <div className="detail">
-            <h3>Joined:</h3>
-            <p>12 JAN 2020</p>
+            <h3>যোগদানঃ</h3>
+            <p>{props.userProfile && props.userProfile.joined}</p>
           </div>
         </div>
       </div>
@@ -73,10 +97,12 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    setUser: (user) => dispatch(setUser(user)),
+    setUserProfile: (user) => dispatch(setUserProfile(user)),
     clearUser: () => {
       dispatch(clearUser());
     },
+    setLoading: () => dispatch(setLoading()),
+    clearLoading: () => dispatch(clearLoading()),
   };
 };
 

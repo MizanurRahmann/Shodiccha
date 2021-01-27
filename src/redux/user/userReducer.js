@@ -1,4 +1,10 @@
-import { CLEAR_USER, SET_USER } from "./userType";
+import {
+  CLEAR_LOADING,
+  CLEAR_USER,
+  SET_LOADING,
+  SET_USER,
+  SET_USER_PROFILE,
+} from "./userType";
 
 const initialState = {
   loading: true,
@@ -16,10 +22,26 @@ const userReducer = (state = initialState, action) => {
         isLogedIn: true,
         loading: false,
       };
+    case SET_USER_PROFILE:
+      return {
+        ...state,
+        currentUserProfile: action.currentUserProfile,
+        loading: false,
+      };
     case CLEAR_USER:
       return {
         currentUser: null,
         isLogedIn: false,
+        loading: false,
+      };
+    case SET_LOADING:
+      return {
+        ...state,
+        loading: true,
+      };
+    case CLEAR_LOADING:
+      return {
+        ...state,
         loading: false,
       };
     default:
