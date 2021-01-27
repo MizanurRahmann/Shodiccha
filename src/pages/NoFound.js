@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { bindActionCreators } from "redux";
 import notFound from "../assets/images/notFound.svg";
 import Navbar from "../components/Navbar/Navbar";
 
@@ -24,7 +23,7 @@ function NoFound() {
           fontFamily: "SHOBUJ",
         }}
       >
-        <img src={notFound} width="60%" />
+        <img src={notFound} width="60%" alt="" />
         <h1
           style={{
             fontSize: "40px",

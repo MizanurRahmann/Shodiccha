@@ -152,3 +152,72 @@
     }
   }
 }
+
+// Email Varification Page
+.emailVarification {
+  width: 100%;
+  height: calc(90vh - 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background: #fff;
+  font-family: SHOBUJ;
+  color: var(--text-color);
+
+  .wrapper {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #f7f7f7;
+    margin-bottom: 20px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 60%;
+    }
+  }
+
+  h1 {
+    font-size: 40px;
+    color: var(--primary-color-dark);
+  }
+  h2 {
+    font-weight: normal;
+    font-size: 20px;
+  }
+
+  button {
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-top: 32px;
+    font-size: 18px;
+    font-family: SHOBUJ;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+  }
+
+  button.sent {
+    background: transparent;
+    color: var(--primary-color-dark);
+    border: 2px solid var(--primary-color-dark);
+    &:hover {
+      background: var(--primary-color-dark);
+      color: #fff;
+    }
+  }
+
+  button.processing {
+    background: #f7f7f7;
+    color: gray;
+    border: 2px solid gray;
+    &:hover {
+      background: gray;
+      color: #fff;
+    }
+  }
+}

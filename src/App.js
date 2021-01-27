@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { auth } from "./firebase/util";
 import { connect } from "react-redux";
 import { setUser, clearUser } from "./redux/user/userAction";
