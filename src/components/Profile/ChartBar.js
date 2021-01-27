@@ -73,7 +73,7 @@ function ChartBar() {
           marginBottom: "30px",
         }}
       >
-        শেষ ৮ মাসে আপনার অংশগ্রহনের পরিমান
+        চলমান বছরে আপনার অংশগ্রহনের চার্ট
       </h2>
       <Bar data={data} options={options} />
     </div>

@@ -8,6 +8,7 @@ import "../../styles/Profile.scss";
 //ASSETS
 import member1 from "../../assets/images/member-1.png";
 import ChartBar from "./ChartBar";
+import Overview from "./Overview";
 
 function Profile({ userProfile, currentUser }) {
   useEffect(() => {}, []);
@@ -52,7 +53,9 @@ function Profile({ userProfile, currentUser }) {
         </div>
       </div>
 
-      <div className="profile__overview">Overview</div>
+      <div className="profile__overview">
+        <Overview />
+      </div>
 
       <div className="profile__info">
         <ChartBar />

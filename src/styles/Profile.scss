@@ -83,6 +83,54 @@
     padding: 20px 40px;
     background: #fff;
     border-radius: 8px;
+
+    h2 {
+      margin-bottom: 25px;
+      font-family: SHOBUJ;
+      color: var(--text-color);
+    }
+
+    .overview {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      padding: 5px;
+      border-radius: 5px;
+      transition: 0.4s;
+
+      &:hover {
+        background-color: #f7f7f7;
+        cursor: pointer;
+      }
+
+      &__status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__logo {
+        width: 45px;
+        height: 45px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &__content {
+        margin-left: 15px;
+        font-family: SHOBUJ;
+        h3 {
+          font-size: 18px;
+        }
+        P {
+          font-size: 15px;
+          color: gray;
+        }
+      }
+    }
   }
 
   &__info {
