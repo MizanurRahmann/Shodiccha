@@ -48,7 +48,7 @@ function Description() {
           </p>
 
           <div style={{ margin: "40px 0" }}>
-            <Link to="/" className="btn primary__btn">
+            <Link to="/about" className="btn primary__btn">
               অধিক জানুন
             </Link>
           </div>

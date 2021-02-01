@@ -18,6 +18,7 @@ import FullPageLoading from "./components/Loading/FullPageLoading";
 // Components
 import Dashboard from "./components/Dashboard/Dashboard";
 import Profile from "./components/Profile/Profile";
+import About from "./pages/About";
 
 function App({ setUser, clearUser, loading, isLogedIn, currentUser }) {
   useEffect(() => {
@@ -67,6 +68,7 @@ function App({ setUser, clearUser, loading, isLogedIn, currentUser }) {
           <Route exact path="/enter" component={Enter} />
           <Route exact path="/query" component={Question} />
           <Route exact path="/help" component={Help} />
+          <Route exact path="/about" component={About} />
           <Route component={NoFound} />
         </Switch>
         <Footer />
