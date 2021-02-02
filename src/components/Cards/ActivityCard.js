@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../../styles/ActivityCard.scss";
 
 // ASSETS
@@ -16,7 +17,7 @@ function ActivityCard(props) {
         }}
       ></div>
       <div className="acard__content">
-        <h2>বন্যা দূর্গতদের জন্য অর্থায়ন</h2>
+        <Link to="activity/1" className="topicHeading">বন্যা দূর্গতদের জন্য অর্থায়ন</Link>
         <p>স্থানঃ ঠনঠনিয়া, বগুড়া সদর, বগুড়া</p>
         <p className="date">15 JAN 2020</p>
 
@@ -34,7 +35,7 @@ function ActivityCard(props) {
         </div>
 
         {/* readmore button */}
-        <div className="readmore">
+        <Link to="activity/1" className="readmore">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -50,7 +51,7 @@ function ActivityCard(props) {
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
-        </div>
+        </Link>
       </div>
     </div>
   );

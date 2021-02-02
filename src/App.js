@@ -14,11 +14,12 @@ import Footer from "./components/Footer";
 import NoFound from "./pages/NoFound";
 import UserHome from "./pages/UserHome";
 import FullPageLoading from "./components/Loading/FullPageLoading";
+import About from "./pages/About";
+import Activity from "./pages/Activity";
 
 // Components
 import Dashboard from "./components/Dashboard/Dashboard";
 import Profile from "./components/Profile/Profile";
-import About from "./pages/About";
 
 function App({ setUser, clearUser, loading, isLogedIn, currentUser }) {
   useEffect(() => {
@@ -69,6 +70,7 @@ function App({ setUser, clearUser, loading, isLogedIn, currentUser }) {
           <Route exact path="/query" component={Question} />
           <Route exact path="/help" component={Help} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/activity/:id" component={Activity}></Route>
           <Route component={NoFound} />
         </Switch>
         <Footer />

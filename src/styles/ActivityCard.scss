@@ -21,7 +21,9 @@
     padding: 10px 30px;
     width: 100%;
 
-    h2 {
+    a.topicHeading {
+      color: var(--text-color);
+      text-decoration: none;
       font-family: SHOBUJ;
       font-size: 1.5rem;
     }
@@ -61,7 +63,8 @@
       }
     }
 
-    .readmore {
+    a.readmore {
+      text-decoration: none;
       width: 60px;
       height: 60px;
       border-radius: 10px;
