@@ -15,7 +15,7 @@ function ActivityCard(props) {
         style={{
           background: `url(${help}) no-repeat center center / cover`,
         }}
-      ></div>
+      ><Link to="activity/1" className="black"></Link></div>
       <div className="acard__content">
         <Link to="activity/1" className="topicHeading">বন্যা দূর্গতদের জন্য অর্থায়ন</Link>
         <p>স্থানঃ ঠনঠনিয়া, বগুড়া সদর, বগুড়া</p>

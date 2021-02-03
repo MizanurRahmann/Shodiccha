@@ -11,9 +11,25 @@
     height: 32vh;
     width: 100%;
     border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 
-    img {
+    a.black{
+      display: block;
+      height: 0;
+      width: 0;
+      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.65);
+      position: absolute;
+      top: -100%;
+      left: 0;
+      transition: 0.3s;
+    }
+
+    &:hover > .black{
+      top: 0;
       height: 100%;
+      width: 100%;
     }
   }
 
@@ -26,7 +42,11 @@
       text-decoration: none;
       font-family: SHOBUJ;
       font-size: 1.5rem;
+      &:hover{
+        color: #000;
+      }
     }
+
     p {
       font-size: 16px;
       font-family: SHOBUJ;
