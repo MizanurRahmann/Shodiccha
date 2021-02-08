@@ -1,9 +1,10 @@
 .about{
     min-height: 100vh;
     padding: 100px;
+    border: 1px solid red;
 
     &__heading{
-        height: calc(100vh - 150px);
+        min-height: calc(100vh - 80px);
         width: 100%;
         position: relative;
 
@@ -21,11 +22,11 @@
         }
         img.image1{
             width: 25vw;
-            bottom: 0;
+            top: 95px;
             right: 0;
         }
         img.image2{
-            height: 65vh;
+            width: 25vw;
             top: 0;
             left: 0;
         }
@@ -37,7 +38,7 @@
             border-radius: 5px;
             position: absolute;
             left:25vw;
-            top: 130px;
+            top: 70px;
 
             &__text{
                 font-family: RONGDHONU;
@@ -66,12 +67,70 @@
             border-radius: 5px;
             position: absolute;
             left: 20vw;
-            bottom: 100px;
+            top: 37%;
+            span{
+                color: var(--primary-color-dark);
+                font-size: 25px;
+            }
+        }
+    }
+
+    &__description{
+        font-size: 18px;
+        font-family: SHOBUJ;
+        color: var(--text-color);
+    }
+}
+
+@media (max-width: 420px) {
+    .about{
+        min-height: 100vh;
+        width: 100%;
+        padding: 50px 20px;
+
+        &__heading{ 
+            min-height: 100vh;
+            h1.heading{ font-size: 3.6rem; right: 130px; top: -5px; }
+            .text{
+                width: 100%;
+                padding: 0;
+                border-radius: 0;
+                font-size: 14px;
+                left: 0;
+                top: 465px;
+                span{
+                    color: var(--primary-color-dark);
+                    font-size: 16px;
+                }
+            }img.image1{ width: 43vw; top: 210px; right: 0; }
+            img.image2{ width: 42vw; top: 80px; left: 0; }
+            
+            .quote{
+                width: 50vw; padding: 0 10px;
+                left: 47%; top: 75px;
+    
+                &__text{ font-size: 12px; span{font-size: 18px;} }
+                &__author{ font-size: 12px; }
+            }
+        }
+        
+        &__description{
+            margin-top: 25px;
+            font-size: 14px;
         }
     }
 }
 
-@keyframes imageWidth{
-    0%{ opacity: 0; transform: scale(0);}
-    100%{ opacity: 1; transform: scale(1);} 
+@media (max-width: 380px) { 
+    .about{
+        &__heading{
+            min-height: calc(100vh + 120px);
+            .text{ top: 440px; 
+            .a img.image2{ width: 40vw;}} 
+        }
+        
+
+    }
 }
+@media (max-width: 325px) { .about{.text{ top: 400px; }}}
+  
