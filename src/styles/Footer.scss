@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   &__intro {
     width: 25%;
@@ -59,6 +60,7 @@
     .connections {
       .connection {
         display: flex;
+        align-items: center;
         margin-bottom: 10px;
         svg {
           margin-right: 20px;
@@ -95,6 +97,44 @@
               transform: translate(-50%, -50%);
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 760px) {
+  .footer{
+    padding: 25px 25px;
+    &__intro{
+      width: 100%;
+      margin-bottom: 40px;
+      h1 { font-size: 2rem;}
+      p { font-size: 15px; line-height: 18px;}
+      .links { margin-top: 10px; a { margin-right: 10px; font-size: 15px; } }
+    }
+
+    &__connection{
+      width: 100%;
+      font-size: 18px;
+      h1 { font-size: 1.6rem; margin-bottom: 10px; span { font-weight: 200; font-size: 15px;} }
+      .connections {
+        .connection {
+          font-size: 15px; margin-bottom: 4px;
+          svg { margin-right: 10px; width: 15px; height: 15px; }
+          .socialLinks{
+            display: flex;
+            .socialLink {
+              width: 40px;
+              height: 40px;
+              margin-right: 10px;
+              margin-top: 25px;
+              a { svg { width: 14px; height: 14px; } }
+            }
+          }
+        }
+        .connection.social{
+          display: flex; justify-content: center;
         }
       }
     }

@@ -65,7 +65,7 @@ function Footer() {
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            {/* <div>shodicchaBogura@gmail.com</div> */}
+            <div>shodicchaBogura@gmail.com</div>
           </div>
 
           <div className="connection">
@@ -86,7 +86,8 @@ function Footer() {
             <div>+880 1531-709711</div>
           </div>
 
-          <div className="connection">
+          <div className="connection social">
+            <div className="socialLinks">
             <div className="socialLink">
               <Link to="/">
                 <svg
@@ -146,6 +147,7 @@ function Footer() {
               </Link>
             </div>
           </div>
+            </div>
         </div>
       </div>
     </div>
