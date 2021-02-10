@@ -185,6 +185,18 @@
   }
 }
 @media (max-width: 768px) {
+  .navforviwer{
+    padding: 0 20px;
+    a.donate {
+      font-size: 15px;
+      padding: 5px 15px;
+      border-radius: 5px;
+      margin-right: 0;
+    }
+  }
+  .navforviwer.white-active {
+    height: 7vh;
+  }
   .nav-items {
     display: none;
   }
