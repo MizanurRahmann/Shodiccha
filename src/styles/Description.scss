@@ -4,6 +4,7 @@
   position: relative;
   overflow: hidden;
   display: flex;
+  flex-wrap: wrap;
 
   &__heading {
     width: 50%;
@@ -41,6 +42,9 @@
       padding: 3px 5px;
       margin: 0 3px;
       border-radius: 3px;
+    }
+    .button{
+      margin: 40px 0;
     }
   }
 
@@ -107,6 +111,78 @@
       font-family: SHOBUJ;
       color: var(--text-color);
       font-weight: normal;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .description{
+    &__heading {
+      width: 100%;
+      height: auto;
+      margin: 60px 0 40px 0;
+      padding: 0;
+      font-size: 2rem;
+      svg {
+        width: 100px;
+      }
+    } 
+    &__text {
+      width: 100%;
+      padding: 25px;
+      font-size: 15px;
+      p span {
+        font-size: 18px;
+        padding: 3px 5px;
+        margin: 0 3px;
+        border-radius: 3px;
+      }
+      .button{
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+        a{
+          border: none;
+          font-size: 20px;
+        }
+      }
+    }
+    .flower-left {
+      position: absolute;
+      img { width: 7rem; }
+    }
+    .flower-right {
+      position: absolute;
+      img { width: 7rem; }
+    }
+  }
+
+  .workingon {
+    width: calc(90% - 50px);
+    padding: 0;
+    &__heading {
+      width: 100%;
+      margin-bottom: 15px;
+      p {
+        font-size: 25px;
+      }
+      h1 {
+        font-size: 2rem;
+        color: var(--primary-color-dark);
+        span {
+          font-weight: bold;
+          font-size: 2rem;
+        }
+      }
+    }
+    .service {
+      width: 45%;
+      padding: 10px 0;
+      margin: 5px;
+      box-shadow: 3px 3px 10px rgba(122, 122, 122, 0.212);
+      border-radius: 10px;
+      img { width: 40px; }
+      h2 {font-size: 16px; }
     }
   }
 }

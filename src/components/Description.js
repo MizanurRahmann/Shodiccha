@@ -47,9 +47,9 @@ function Description() {
             পারে, হাসতে পারে এবং সোনালী স্বপ্ন দেখতে পারে।
           </p>
 
-          <div style={{ margin: "40px 0" }}>
+          <div className="button">
             <Link to="/about" className="btn primary__btn">
-              অধিক জানুন
+              অধিক জানুন...
             </Link>
           </div>
         </div>
