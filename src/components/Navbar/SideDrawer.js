@@ -30,7 +30,7 @@ const SideDrawer = (props) => {
         স্বদিচ্ছা
       </Link>
       <ul>
-        { props.isLogedIn
+        { !props.isLogedIn
           ? linksFirst.map(el => (<li>
             <Link to={el.link} onClick={props.clear}>
               {el.name}

@@ -198,6 +198,31 @@
       border-radius: 5px;
       margin-right: 0;
     }
+
+    .userBox {
+      padding: 0;
+      .notification {
+        width: 20px; height: 20px;
+        svg{
+          width: 20px; height: 20px;
+        }
+        .dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+      }
+      .userPhoto {
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
+          padding: 2px;
+          border: 2px solid var(--primary-color-dark);
+        }
+      }
+    }
+    
   }
   .navforviwer.white-active {
     height: 7vh;
