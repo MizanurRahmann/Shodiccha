@@ -119,7 +119,7 @@
 /* ============== SIDE DRAWER ============= */
 .side__drawer {
   height: 100%;
-  width: 60%;
+  width: 50%;
   max-width: 400px;
   padding: 70px 0 50px 0;
   background: white;
@@ -135,17 +135,22 @@
   transform: translateX(0);
 }
 .side__drawer .navbar-brand {
-  display: inline-block;
   width: 100%;
-  text-align: center;
+  display: inline-block;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ccc;
   border-radius: 0;
-  padding-bottom: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-family: NILADRI;
+  font-size: 2rem;
+  color: var(--primary-color-dark);
 }
 .side__drawer ul {
   height: 100%;
   list-style: none;
   padding: 0 0 0 20px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -153,13 +158,13 @@
   margin: 10px 0;
 }
 .side__drawer li a {
-  font-size: 15px;
-  font-weight: 300;
-  text-decoration: none;
-  color: #444;
-  display: inline-block;
   width: 100%;
   text-decoration: none;
+  font-family: SHOBUJ;
+  font-size: 17px;
+  font-weight: 300;
+  color: var(--text-color);
+  display: inline-block;
 }
 .side__drawer li a svg {
   width: 16px;
