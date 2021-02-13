@@ -14,7 +14,7 @@
     overflow: hidden;
     position: relative;
 
-    a.black{
+    a.black {
       display: block;
       height: 0;
       width: 0;
@@ -26,7 +26,7 @@
       transition: 0.3s;
     }
 
-    &:hover > .black{
+    &:hover > .black {
       top: 0;
       height: 100%;
       width: 100%;
@@ -42,7 +42,7 @@
       text-decoration: none;
       font-family: SHOBUJ;
       font-size: 1.5rem;
-      &:hover{
+      &:hover {
         color: #000;
       }
     }
@@ -107,6 +107,51 @@
 
       &:hover {
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+}
+
+// FOR MOBILE VIEW
+@media (max-width: 480px) {
+  .acard {
+    height: 35vh;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    margin: 0 10px 5px 10px;
+    box-shadow: 0px 2px 5px rgba(122, 122, 122, 0.212);
+
+    &__image {
+      height: 14vh;
+    }
+
+    &__content {
+      padding: 10px;
+      width: 100%;
+
+      a.topicHeading {
+        font-size: 14px;
+      }
+      p {
+        display: none;
+      }
+      a.readmore {
+        display: none;
+      }
+
+      &__info {
+        margin-top: 5px;
+        .logo {
+          height: 20px;
+          width: 20px;
+          svg {
+            width: 14px;
+            height: 14px;
+          }
+        }
+        .value {
+          font-size: 16px;
+        }
       }
     }
   }
