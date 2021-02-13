@@ -1,5 +1,6 @@
 .recentActivity {
   display: flex;
+  flex-wrap: wrap;
 
   .heading {
     width: 30%;
@@ -37,6 +38,44 @@
         height: 50vh;
         &__image {
           height: 22vh;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .recentActivity {
+    display: flex;
+    flex-wrap: wrap;
+  
+    .heading {
+      width: 100%;
+      padding: 25px;
+      font-size: 14px;
+      text-align: center;
+
+      p.head-text {
+        font-size: 25px;
+      }
+      h1 {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+    }
+
+    .slider-block {
+      width: 100%;
+      padding: 10px;
+      min-height: 50vh !important;
+  
+      .slider.recent {
+        .acard {
+          height: 35vh;
+          width: calc(90% - 20px);
+          &__image {
+            height: 16vh;
+          }
         }
       }
     }
