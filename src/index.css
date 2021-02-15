@@ -118,12 +118,13 @@ p.primary__heading-text {
   background: #fff;
   box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 50px;
+  top: 88vh;
   right: 50px;
   display: flex;
   align-items: center;
   animation-name: notificationAnim;
   animation-duration: 1s;
+  z-index: 1000;
 }
 
 .notification svg.success{
