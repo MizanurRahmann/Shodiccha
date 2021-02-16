@@ -20,8 +20,8 @@ function TrackHelpingProgress() {
       <h1>&#8220; IG34KKfwr55KKKfewr5 &#8221;</h1>
 
       <div className="links">
-          <Link>Back</Link>
-          <Link>Home</Link>
+          <Link to="/help">পূর্বের পেজে যান</Link>
+          <Link to="/">হোম পেজে যান</Link>
       </div>
     </div>
   );
