@@ -12,6 +12,7 @@ import wallet from "../assets/images/wallet.svg";
 import Navbar from "../components/Navbar/Navbar";
 import FormPageStyle from "../components/Auth/FormPageStyle";
 import NotificationPop from "../components/NotificationPop";
+import TrackHelpingProgress from "../components/TrackProgress/TrackHelpingProgress";
 
 function Help() {
   const [topic, setTopic] = useState("");
@@ -92,11 +93,20 @@ function Help() {
       fdb
         .collection("Helps")
         .add({
-          topic, name, phone, medium, village, post, thana, district, description,
+          topic,
+          name,
+          phone,
+          medium,
+          village,
+          post,
+          thana,
+          district,
+          description,
         })
         .then(() => {
           clearFields();
           setLoading(false);
+          setNotificationActive(true);
           setNotification("Your request is submitted");
         })
         .catch((err) => {
@@ -111,116 +121,134 @@ function Help() {
       <div className="help">
         <Navbar />
         <div className="help__content">
-          {/* HEADING */}
+          {/* Heading */}
           <h1 className="primary__heading">সাহায্যের জন্য আবেদন করুন</h1>
-          <p className="primary__heading-text">
-            সাহায্যের আবেদনের জন্য অবশ্যই আপনার সঠিক তথ্যাদি ও আপনার সাহায্য
-            চাওয়ার বিস্তারিত কারন লিখুন। আমাদের টিম যতোদ্রুত সম্ভব আপনার তথ্য
-            যাচাই করে এ সম্পর্কে আপনাকে ফিডব্যাক দেবে।
-          </p>
 
-          {/* HELP FORM */}
-          <div className="form-block">
-            <form onSubmit={help}>
-              <input
-                type="text"
-                placeholder="সাহায্যের বিষয়"
-                value={topic}
-                onChange={(e) => setTopic(e.target.value)}
-              />
-              <div className="input-block">
+          {/* If form is submitted notification will be true and show other texts */}
+          {!notificationActive ? (
+            <p className="primary__heading-text">
+              সাহায্যের আবেদনের জন্য অবশ্যই আপনার সঠিক তথ্যাদি ও আপনার সাহায্য
+              চাওয়ার বিস্তারিত কারন লিখুন। আমাদের টিম যতোদ্রুত সম্ভব আপনার তথ্য
+              যাচাই করে এ সম্পর্কে আপনাকে ফিডব্যাক দেবে।
+            </p>
+          ) : (
+            // <p className="primary__heading-text">
+            //   আপনার অনুরোধটি নেয়া হয়েছে। অনুরোধটির তথ্য যাচাই এর জন্য
+            //   কিছুদিন সময়ের প্রয়োজন। তথ্য যাচাই শেষে আপনার করা অনুরোধ সম্পর্কীত
+            //   আপডেট আপনাকে জানানো হবে। যেকোন মূহূর্তে আপনার অনুরোধের প্রগ্রেস
+            //   জানতে করতে নিচের আইডিটি সংগ্রহ করুন (কোথাও লিখে রাখুন)।
+            // </p>
+            null
+          )}
+
+          {/* If form is submitted notification will be true and show texts otherwise show the sumbission form */}
+          {!notificationActive ? (
+            <div className="form-block">
+              <form onSubmit={help}>
                 <input
                   type="text"
-                  placeholder="আবেদনকারির নাম"
-                  value={name}
-                  onChange={(e) => {
-                    setName(e.target.value);
-                  }}
+                  placeholder="সাহায্যের বিষয়"
+                  value={topic}
+                  onChange={(e) => setTopic(e.target.value)}
                 />
-                <input
-                  type="text"
-                  placeholder="ফোন নাম্বার"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-              </div>
-              <div className="selectOptions">
-                <select
-                  value={medium}
-                  onChange={(e) => setMedium(e.target.value)}
-                >
-                  <option value="self">মাধ্যমঃ নিজে</option>
-                  <option value="member">মাধ্যমঃ সদস্য</option>
-                </select>
-                <div className="arrow">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-chevron-down"
-                  >
-                    <polyline points="6 9 12 15 18 9"></polyline>
-                  </svg>
+                <div className="input-block">
+                  <input
+                    type="text"
+                    placeholder="আবেদনকারির নাম"
+                    value={name}
+                    onChange={(e) => {
+                      setName(e.target.value);
+                    }}
+                  />
+                  <input
+                    type="text"
+                    placeholder="ফোন নাম্বার"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
                 </div>
-              </div>
+                <div className="selectOptions">
+                  <select
+                    value={medium}
+                    onChange={(e) => setMedium(e.target.value)}
+                  >
+                    <option value="self">মাধ্যমঃ নিজে</option>
+                    <option value="member">মাধ্যমঃ সদস্য</option>
+                  </select>
+                  <div className="arrow">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-chevron-down"
+                    >
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </div>
 
-              <div className="input-block">
-                <input
-                  type="text"
-                  placeholder="গ্রাম"
-                  value={village}
-                  onChange={(e) => setVillage(e.target.value)}
-                />
-                <input
-                  type="text"
-                  placeholder="পোষ্ট"
-                  value={post}
-                  onChange={(e) => setPost(e.target.value)}
-                />
-              </div>
-              <div className="input-block">
-                <input
-                  type="text"
-                  placeholder="থানা"
-                  value={thana}
-                  onChange={(e) => setThana(e.target.value)}
-                />
-                <input
-                  type="text"
-                  placeholder="জেলা"
-                  value={district}
-                  onChange={(e) => setDistrict(e.target.value)}
-                />
-              </div>
-              <textarea
-                rows="10"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-              ></textarea>
+                <div className="input-block">
+                  <input
+                    type="text"
+                    placeholder="গ্রাম"
+                    value={village}
+                    onChange={(e) => setVillage(e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="পোষ্ট"
+                    value={post}
+                    onChange={(e) => setPost(e.target.value)}
+                  />
+                </div>
+                <div className="input-block">
+                  <input
+                    type="text"
+                    placeholder="থানা"
+                    value={thana}
+                    onChange={(e) => setThana(e.target.value)}
+                  />
+                  <input
+                    type="text"
+                    placeholder="জেলা"
+                    value={district}
+                    onChange={(e) => setDistrict(e.target.value)}
+                  />
+                </div>
+                <textarea
+                  rows="10"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                ></textarea>
 
-              <small
-                style={{ color: "red", margin: "10px 0", fontSize: "15px" }}
-              >
-                {error}
-              </small>
+                <small
+                  style={{ color: "red", margin: "10px 0", fontSize: "15px" }}
+                >
+                  {error}
+                </small>
 
-              {!loading ? (
-                <button>সাবমিট</button>
-              ) : (
-                <button>প্রসেসিং...</button>
-              )}
-            </form>
-          </div>
+                {!loading ? (
+                  <button>সাবমিট</button>
+                ) : (
+                  <button>প্রসেসিং...</button>
+                )}
+              </form>
+            </div>
+          ) : (
+            <TrackHelpingProgress />
+          )}
         </div>
 
+        {/* Form page styling showed in right side */}
         <FormPageStyle image={wallet} component="apply" />
       </div>
+
       {notificationActive ? (
         <NotificationPop message={notification} type={"success"} />
       ) : null}

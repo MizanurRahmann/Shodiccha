@@ -1,0 +1,28 @@
+.progress{
+    margin-top: 50px;
+
+    &__image{
+        width: 100%;
+        text-align: center;
+    }
+
+    h1{
+        text-align: center;
+        font-size: 3rem;
+        color: var(--primary-color-dark);
+    }
+
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25px;
+            a{
+                display: inline-block;
+                margin: 0 10px;
+                text-decoration: none;
+                color: var(--text-color);
+                font-size: 18px;
+            }
+    }
+}
