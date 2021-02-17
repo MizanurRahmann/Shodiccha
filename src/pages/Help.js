@@ -26,6 +26,7 @@ function Help() {
   const [description, setDescription] = useState("");
   const [error, setError] = useState("");
   const [notification, setNotification] = useState("");
+  const [ requestId, setRequestId ] = useState("");
   const [notificationActive, setNotificationActive] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -44,16 +45,7 @@ function Help() {
 
   // All fields required validation check
   const requiredFildCheck = () => {
-    if (
-      name &&
-      phone &&
-      village &&
-      post &&
-      thana &&
-      district &&
-      medium &&
-      description
-    ) {
+    if (topic && name && phone && village && post && thana && district && description) {
       return true;
     } else {
       setError("All fields required.");
@@ -76,9 +68,7 @@ function Help() {
     if (description.length >= 5) {
       return true;
     } else {
-      setError(
-        "You have to describe your problems in more than 200 characters."
-      );
+      setError("You have to describe your problems in more than 200 characters.");
       return false;
     }
   };
@@ -86,27 +76,18 @@ function Help() {
   // Help functionality
   const help = (e) => {
     e.preventDefault();
-    setNotificationActive(true);
     setLoading(true);
 
     if (requiredFildCheck() && phoneNumberCheck() && descriptionCheck()) {
       fdb
         .collection("Helps")
-        .add({
-          topic,
-          name,
-          phone,
-          medium,
-          village,
-          post,
-          thana,
-          district,
-          description,
-        })
-        .then(() => {
+        .add({topic, name, phone, medium, village, post, thana, district, description, progress: "Processing"})
+        .then((doc) => {
           clearFields();
           setLoading(false);
           setNotificationActive(true);
+          setNotificationActive(true);
+          setRequestId(doc.id)
           setNotification("Your request is submitted");
         })
         .catch((err) => {
@@ -132,12 +113,6 @@ function Help() {
               যাচাই করে এ সম্পর্কে আপনাকে ফিডব্যাক দেবে।
             </p>
           ) : (
-            // <p className="primary__heading-text">
-            //   আপনার অনুরোধটি নেয়া হয়েছে। অনুরোধটির তথ্য যাচাই এর জন্য
-            //   কিছুদিন সময়ের প্রয়োজন। তথ্য যাচাই শেষে আপনার করা অনুরোধ সম্পর্কীত
-            //   আপডেট আপনাকে জানানো হবে। যেকোন মূহূর্তে আপনার অনুরোধের প্রগ্রেস
-            //   জানতে করতে নিচের আইডিটি সংগ্রহ করুন (কোথাও লিখে রাখুন)।
-            // </p>
             null
           )}
 
@@ -241,7 +216,7 @@ function Help() {
               </form>
             </div>
           ) : (
-            <TrackHelpingProgress />
+            <TrackHelpingProgress requestId={requestId} />
           )}
         </div>
 
@@ -249,9 +224,7 @@ function Help() {
         <FormPageStyle image={wallet} component="apply" />
       </div>
 
-      {notificationActive ? (
-        <NotificationPop message={notification} type={"success"} />
-      ) : null}
+      {notificationActive ? <NotificationPop message={notification} type={"success"} /> : null}
     </>
   );
 }

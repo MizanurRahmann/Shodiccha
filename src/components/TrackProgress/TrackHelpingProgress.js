@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import completed from "../../assets/images/Completed.svg";
 import "../../styles/Progress.scss";
 
-function TrackHelpingProgress() {
+function TrackHelpingProgress({requestId}) {
   return (
     <div className="progress">
       <p>
@@ -17,10 +17,9 @@ function TrackHelpingProgress() {
         <img src={completed} alt="" />
       </div>
 
-      <h1>&#8220; IG34KKfwr55KKKfewr5 &#8221;</h1>
+      <h1>&#8220; {requestId} &#8221;</h1>
 
       <div className="links">
-          <Link to="/help">পূর্বের পেজে যান</Link>
           <Link to="/">হোম পেজে যান</Link>
       </div>
     </div>
