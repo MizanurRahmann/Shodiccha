@@ -86,7 +86,6 @@ function Help() {
           clearFields();
           setLoading(false);
           setNotificationActive(true);
-          setNotificationActive(true);
           setRequestId(doc.id)
           setNotification("Your request is submitted");
         })
