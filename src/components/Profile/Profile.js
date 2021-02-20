@@ -26,7 +26,7 @@ function Profile({ currentUser, userProfile, setUserProfile }) {
           console.log(err.message());
         });
     }
-  }, []);
+  });
 
   // If User email varified then render profile otherwise load email-varification page
   if (!currentUser.emailVerified) {

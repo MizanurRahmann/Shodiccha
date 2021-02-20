@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/ApplyDescription.scss";
 
-function ApplyDescription({ userType, chnageTo }) {
+function ApplyDescription() {
   return (
     <div className="applyDesc">
       <p className="primary__heading-text">

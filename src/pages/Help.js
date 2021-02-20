@@ -76,9 +76,9 @@ function Help() {
   // Help functionality
   const help = (e) => {
     e.preventDefault();
-    setLoading(true);
 
     if (requiredFildCheck() && phoneNumberCheck() && descriptionCheck()) {
+      setLoading(true);
       fdb
         .collection("Helps")
         .add({topic, name, phone, medium, village, post, thana, district, description, progress: "Processing"})
@@ -157,10 +157,10 @@ function Help() {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      class="feather feather-chevron-down"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="feather feather-chevron-down"
                     >
                       <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>

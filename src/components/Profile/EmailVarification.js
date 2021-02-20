@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { auth } from "../../firebase/util";
 import { connect } from "react-redux";
 import { setUser } from "../../redux/user/userAction";
-import { useHistory } from "react-router-dom";
 
 // Assets
 import handshake from "../../assets/images/handshake.svg";
 import celebrate from "../../assets/images/celebrate.svg";
 
 function EmailVarification({ setUser }) {
-  const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState("");

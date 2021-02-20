@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const SideDrawer = (props) => {
@@ -31,12 +31,12 @@ const SideDrawer = (props) => {
       </Link>
       <ul>
         { !props.isLogedIn
-          ? linksFirst.map(el => (<li>
+          ? linksFirst.map(el => (<li key={el.name}>
             <Link to={el.link} onClick={props.clear}>
               {el.name}
             </Link>
           </li>))
-          : linksSecond.map(el => (<li>
+          : linksSecond.map(el => (<li key={el.name}>
             <Link to={el.link} onClick={props.clear}>
               {el.name}
             </Link>

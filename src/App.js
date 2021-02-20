@@ -30,7 +30,7 @@ function App({ setUser, clearUser, loading, isLogedIn, currentUser }) {
         clearUser();
       }
     });
-  }, []);
+  });
 
   return (
     <div className="App">
