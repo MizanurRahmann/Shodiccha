@@ -34,6 +34,7 @@
 
     .input-block {
       display: flex;
+      flex-wrap: wrap;
       input,
       .password-block {
         width: 50%;
@@ -116,6 +117,35 @@
         background: var(--primary-color-dark);
         color: #fff;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .form-block {
+    form {
+      input,
+      textarea {
+        width: 100%;
+        padding: 8px !important;
+        margin-top: 20px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+      }
+
+      .input-block {
+        input,
+        .password-block {
+          width: 100% !important;
+          margin-right: 0 !important;
+        }
+      }
+
+      button {
+        margin-top: 0;
+        margin-bottom: 0;
       }
     }
   }
