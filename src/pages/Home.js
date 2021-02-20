@@ -12,7 +12,7 @@ import Navbar from "../components/Navbar/Navbar";
 
 function About() {
   return (
-    <div style={{ padding: "100px 0" }}>
+    <div style={{ paddingTop: "100px" }}>
       <Navbar />
       <Banner />
       <Description />
