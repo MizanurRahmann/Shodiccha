@@ -1,16 +1,25 @@
-## স্বদিচ্ছা ফাউন্ডেশান
-
-স্বদিচ্ছা ফাউন্ডেশান একটি অলাভজনক, অরাজনৈতীক স্বচ্ছাসেবি সংগঠন। মানবতা, বন্ধন, সহযোগিতা এই তিনটি মূল নীতি নিয়ে, এ সংগঠনের যাত্রা শুরু।
-সংগঠনটি বরাবরই বিভিন্ন সেবামূলক কাজের মাধ্যমে বিভিন্ন দুস্থ্য মানুষদের পাশে এসে দাঁড়ায়। পাশাপাশি বিভিন্ন দূর্যোগের সময়, ক্ষতিগ্রস্থ্য এলাকার পরিবেশের উন্নয়নের জন্য বিভিন্ন গঠনমূলক কাজে অংশগ্রহন করে থাকে। সংগঠনটির রয়েছে প্রায় ৫০ জনের মতো স্বেচ্ছাসেবক, যারা নিরলস ভাবে কোনো রকম উপকারের আশা ব্যাতিরেকে শুধুমাত্র মানবতার জন্য নিজেদের অর্থ ও শ্রম দিয়ে যাচ্ছে। এছাড়াও রয়েছে ২০ জনের মতো নিয়মিত ডোনার, যারা বিভিন্ন ইভেন্টে শ্রম দিতে না পারলেউ তাদের অর্থ সাহায্য সঠিক সময়ে পৌছে দিয়ে থাকেন।
-<br/>
-
-## অর্থ সাহায্যের উৎস
-
-প্রতিমাসের একটি নির্দিষ্ট সময়ের মধে সংগঠনের নিয়মিত ডোনাররা কিছু টাকা সংগঠনের তহবিলে দান করে থাকেন, যা পরবর্তী ইভেন্টগুলোর জন্য জমা করে রাখা হয়। কোনো ইভেন্ট শুরু হলে, ইভেন্টের জন্য ব্যবহৃত অর্থের একটি হিসাব করে তার পরিমান সংগঠনের ডোনার ও স্বচ্ছাসেবকদের জানিয়ে দেয়া হয়। তহবিলে থাকা অর্থ দিয়ে যদি ইভেন্টের খরচ সম্পন্ন করা যায় তবে আলাদা করে টাকা সংগ্রহ করা হয়না। তহবিলের টাকা দিয়েই ইভেন্টটি সম্পন্ন হয়। কিন্ত খরচের হিসাবের পরিমান তহবিলে থাকা টাকার চেয়ে অধিক হলে, স্বেচ্ছাসেবক আর ডোনারদের থেকে টাকা সংগ্রহ করে ইভেন্টটি যতোদ্রুত সম্ভব সম্পন্ন করা হয়।
+## About this organization
+The SHODICCHA foundation is a non-profitable, non-political voluntary organization. The journey of this organization started with these three basic principles of Humanity, bonding and cooperation. The organization always stood by the people through various service activities. As well as during various disaster the organization participates different constructive activities. The organization has about 50 volunteers who are relentlessly giving their money and labor only for humanity without any hope of benefit.  There are also 10 regular donors who deliver their money on time for various events.
 <br/><br/>
 
-## প্রজেক্ট
+## About this project
+This project is developed for educational purpose. The organization has no connection with this project. Most of the data used in this project are real however, fake data is also been used in some cases for project purpose. [LIVE DEMO](https://shod-iccha.web.app/)
+<br/></br>
 
-স্বদিচ্ছা ফাউন্ডেশানের জন্য বানানো এ প্রজেকটটি ব্যক্তিগত শিক্ষা বা স্কিল ডেভেলপমেন্টের জন্য। এ ওয়েবসাইটটির সাথে সংগঠনটির কোনো সম্পর্ক বা যোগসূত্র নেই।
+## Features
+-	View Current and past events
+-	Registration for membership & Login as a volunteer
+-	Admin Dashboard (for volunteer)
+-	View own profile and activity (for volunteer)
+-	Question or advice option (for all)
+-	Seeking Help from organization (for all)
+<br/><br/>
 
-[LIVE DEMO](https://shod-iccha.web.app/)
+## Tools & Technologies
+<p>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react" height="55"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" alt="redux" height="55"/>
+<img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="redux" height="65"/>
+<img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg" alt="firebase" width="65" height="55"/>
+<img src="https://www.chartjs.org/img/chartjs-logo.svg" alt="chartjs" height="65" />
+</p>
