@@ -18,11 +18,13 @@
     color: var(--primary-color-dark);
   }
 
-  .button_box {
+  .slider_btn{
     position: absolute;
     right: 100px;
     top: 120px;
-    display: flex;
+    .button_box {
+      display: flex;
+    }
   }
 
   &__slider-block {
@@ -50,4 +52,39 @@
 .slick-arrow:visited,
 .slick-arrow:link {
   background: var(--primary-color-dark) !important;
+}
+
+
+@media (max-width: 480px) {
+  .pastact{
+    width: 100%;
+    height: 70vh;
+    padding: 25px 0;
+    p { font-size: 25px; line-height: 25px; text-align: center; margin-bottom: 10px; }
+    h1 { font-size: 2rem; text-align: center; }
+
+    &__slider-block{
+      width: 100%;
+      padding: 10px;
+      min-height: 40vh !important;
+      margin-top: -50px;
+      .slider {
+        padding: 0;
+      }
+    }
+    .slider_btn{
+      width: 100%;
+      top: 85%;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      .button_box {
+        display: flex;
+        .round_btn{
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
 }
