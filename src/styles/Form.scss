@@ -145,11 +145,26 @@
         }
       }
 
+      .selectOptions {
+        select {
+          padding: 8px !important;
+          width: 100%;
+          border-radius: 4px;
+          font-size: 16px;
+          border: 2px solid #ccc;
+        }
+        .arrow {
+          top: 0; right: 0;
+          height: 42px; width: 35px;
+          border-radius: 0 5px 5px 0;
+        }
+      }
+
       button {
         width: 35vw;
         margin-top: 0;
         margin-bottom: 0px;
-        padding: 5px 20px;
+        padding: 10px 20px;
         border-radius: 4px;
         font-size: 16px;
         text-align: center;
