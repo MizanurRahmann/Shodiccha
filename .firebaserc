@@ -1,5 +1,17 @@
 {
   "projects": {
-    "default": "shod-iccha"
+    "default": "[project-id]"
+  },
+  "targets": {
+    "[project-id]": {
+      "hosting": {
+        "production": [
+          "[project-id]"
+        ],
+        "staging": [
+          "[project-id]-staging"
+        ]
+      }
+    }
   }
 }
