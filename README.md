@@ -3,7 +3,8 @@ The SHODICCHA foundation is a non-profitable, non-political voluntary organizati
 <br/><br/>
 
 ## About this project
-This project is developed for educational purpose. The organization has no connection with this project. Most of the data used in this project are real however, fake data is also been used in some cases for project purpose. [LIVE DEMO](https://shod-iccha.web.app/)
+This project is developed for educational purpose. The organization has no connection with this project. Most of the data used in this project are real however, fake data is also been used in some cases for project purpose.\
+[LIVE DEMO](https://shod-iccha.web.app/)
 <br/></br>
 
 ## Features
