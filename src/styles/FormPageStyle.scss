@@ -30,3 +30,9 @@ svg.square {
     transform: rotate(45deg);
     color: var(--primary-color-light);
 }
+
+@media (max-width: 480px) {
+    .line{display: none;}
+    .line__image-block{ display: none; }
+    svg.square{ width: 90px; height: 90px; top: 50px; left: 50%; transform: translateX(-50%) rotate(-45deg); z-index: -1; }
+}
