@@ -22,7 +22,6 @@ export const setUser = (currentUser) => {
 
 // SETUP USER DETAIL INFO
 export const setUserProfile = (currentUserProfile) => {
-  console.log("setting...");
   return {
     type: SET_USER_PROFILE,
     currentUserProfile: currentUserProfile,

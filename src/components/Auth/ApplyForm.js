@@ -75,6 +75,7 @@ function ApplyForm(props) {
 
   //SAVE USER TO DATABASE
   const saveUsersToDataBase = (createdUser) => {
+    console.log("called");
     fdb
       .collection("Users")
       .doc(createdUser.user.uid)
@@ -88,7 +89,11 @@ function ApplyForm(props) {
         phone,
         address,
         occupation,
-      });
+      }).then(() => {
+        // nothing
+      }).catch(err => {
+        setErrors(err.message);
+      })
   };
 
   // CLEAR ALL FIELDS

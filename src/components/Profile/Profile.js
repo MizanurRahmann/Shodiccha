@@ -1,33 +1,17 @@
-import React, { useEffect } from "react";
-import { fdb } from "../../firebase/util";
+import React from "react";
 import { connect } from "react-redux";
-import { setUserProfile } from "../../redux/user/userAction";
 
 // Scss
 import "../../styles/Profile.scss";
+
 // Components
 import EmailVarification from "./EmailVarification";
 import BasicInformation from "./BasicInformation";
 import Overview from "./Overview";
 import ChartBar from "./ChartBar";
 
-function Profile({ currentUser, userProfile, setUserProfile }) {
-  // If user profile not set to redux store, then set user profile
-  useEffect(() => {
-    if (userProfile === null) {
-      fdb
-        .collection("Users")
-        .doc(currentUser.uid)
-        .get()
-        .then((doc) => {
-          setUserProfile(doc.data());
-        })
-        .catch((err) => {
-          console.log(err.message());
-        });
-    }
-  });
-
+function Profile({ currentUser, userProfile }) {
+  
   // If User email varified then render profile otherwise load email-varification page
   if (!currentUser.emailVerified) {
     return <EmailVarification />;
@@ -61,10 +45,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    setUserProfile: (user) => dispatch(setUserProfile(user)),
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Profile);
+export default connect(mapStateToProps)(Profile);

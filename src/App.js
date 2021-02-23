@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { auth } from "./firebase/util";
+import { auth, fdb } from "./firebase/util";
 import { connect } from "react-redux";
-import { setUser, clearUser } from "./redux/user/userAction";
+import { setUser, clearUser, setUserProfile } from "./redux/user/userAction";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Pages
@@ -21,16 +21,23 @@ import Activity from "./pages/Activity";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Profile from "./components/Profile/Profile";
 
-function App({ setUser, clearUser, loading, isLogedIn, currentUser }) {
+function App({ setUser, clearUser, loading, isLogedIn }) {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
+        // set user to redux
         setUser(user);
+        // Set user profile to redux
+        fdb.collection("Users").doc(user.uid)
+        .get()
+        .then((doc) => {
+          setUserProfile(doc.data());
+        })
       } else {
         clearUser();
       }
     });
-  });
+  }, []);
 
   return (
     <div className="App">
