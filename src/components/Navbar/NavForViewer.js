@@ -50,7 +50,7 @@ function NavForViewer(props) {
         </NavLink>
       ) : (
         <div className="userBox">
-          <div className="notification">
+          <div className="bell">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="30"

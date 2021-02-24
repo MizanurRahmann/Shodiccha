@@ -21,7 +21,7 @@ import Activity from "./pages/Activity";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Profile from "./components/Profile/Profile";
 
-function App({ setUser, clearUser, loading, isLogedIn }) {
+function App({ setUser, setUserProfile, clearUser, loading, isLogedIn }) {
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
       if (user) {
@@ -97,9 +97,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     setUser: (user) => dispatch(setUser(user)),
-    clearUser: () => {
-      dispatch(clearUser());
-    },
+    setUserProfile: (user) => dispatch(setUserProfile(user)),
+    clearUser: () => { dispatch(clearUser())},
   };
 };
 
