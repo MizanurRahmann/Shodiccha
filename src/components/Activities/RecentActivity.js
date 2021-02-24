@@ -91,10 +91,6 @@ function RecentActivity() {
           <ActivityCard value={2} />
           <ActivityCard value={3} />
           <ActivityCard value={4} />
-          <ActivityCard value={5} />
-          <ActivityCard value={6} />
-          <ActivityCard value={7} />
-          <ActivityCard value={8} />
         </Slider>
       </div>
     </div>
